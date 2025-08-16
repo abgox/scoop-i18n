@@ -5,7 +5,7 @@
   "filename-lint.includePatterns": [
     "**/.github/**",
     "**/.vscode/**",
-    "bin/**",
+    "scripts/**",
     "*"
   ],
   "filename-lint.excludePatterns": ["**/.github/ISSUE_TEMPLATE", "readme.*.md"]
