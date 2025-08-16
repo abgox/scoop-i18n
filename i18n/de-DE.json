@@ -1,4 +1,7 @@
 {
+  "ERROR": "",
+  "WARN": "",
+  "INFO": "",
   "scoop: '{0}' isn't a scoop command. See 'scoop help'.": "",
   "URL {0} is not valid": "",
   "{0} is not a valid Git URL!": "",
