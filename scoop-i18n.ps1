@@ -62,9 +62,9 @@ else {
     }
 }
 
-foreach ($p in ${scoop-i18n}.ScoopConfigPaths) {
-    if (Test-Path $p) {
-        ${scoop-i18n}.ScoopConfig = ${scoop-i18n}.ConvertFrom_JsonAsHashtable((Get-Content $p -Raw -Encoding utf8 -WarningAction SilentlyContinue))
+foreach ($_ in ${scoop-i18n}.ScoopConfigPaths) {
+    if (Test-Path $_) {
+        ${scoop-i18n}.ScoopConfig = ${scoop-i18n}.ConvertFrom_JsonAsHashtable((Get-Content $_ -Raw -Encoding utf8 -WarningAction SilentlyContinue))
         break
     }
 }
@@ -201,6 +201,3 @@ function script:Write-Output {
 
     Microsoft.PowerShell.Utility\Write-Output $InputObject
 }
-
-
-function warn($msg) { write-host "WARN  $msg" -f darkyellow }
