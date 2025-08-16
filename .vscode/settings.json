@@ -1,0 +1,12 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "filename-lint.enabled": true,
+  "filename-lint.includePatterns": [
+    "**/.github/**",
+    "**/.vscode/**",
+    "bin/**",
+    "*"
+  ],
+  "filename-lint.excludePatterns": ["**/.github/ISSUE_TEMPLATE", "readme.*.md"]
+}
