@@ -1,4 +1,6 @@
-﻿$baseLangFile = "$PSScriptRoot\..\i18n\en-US.json"
+﻿#Requires -Version 7.0
+
+$baseLangFile = "$PSScriptRoot\..\i18n\en-US.json"
 $baseTranslations = Get-Content $baseLangFile -Raw | ConvertFrom-Json -AsHashtable
 
 $report = [System.Collections.Generic.List[object]]::new()
