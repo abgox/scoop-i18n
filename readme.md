@@ -66,5 +66,6 @@ An internationalization tool designed for [Scoop](https://scoop.sh/) to help use
 |:-:|:-:|
 |[en-US](./i18n/en-US.json)|100%|
 |[zh-CN](./i18n/zh-CN.json)|100%|
+|[zh-TW](./i18n/zh-TW.json)|100%|
 
 <!-- prettier-ignore-end -->
