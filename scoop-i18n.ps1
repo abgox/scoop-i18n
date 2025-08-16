@@ -1,10 +1,11 @@
 ﻿New-Variable -Name 'scoop-i18n' -Value @{
+    Id               = "abgox.scoop-i18n"
     Languages        = Get-ChildItem "$PSScriptRoot\i18n" -File | ForEach-Object { $_.BaseName }
     ScoopConfigPaths = @(
         "$env:SCOOP\config.json",
         "$env:UserProfile\.config\scoop\config.json"
     )
-} -Scope Script
+} -Scope Script -Option ReadOnly
 
 if ($PSEdition -eq 'Core') {
     Add-Member -InputObject ${scoop-i18n} -MemberType ScriptMethod ConvertFrom_JsonAsHashtable {
@@ -82,7 +83,7 @@ if (${scoop-i18n}.Language -notin ${scoop-i18n}.Languages) {
 
 ${scoop-i18n}.i18n = ${scoop-i18n}.ConvertFrom_JsonAsHashtable((Get-Content "$PSScriptRoot\i18n\$(${scoop-i18n}.Language).json" -Raw -Encoding utf8 -WarningAction SilentlyContinue))
 
-function script:Get-LocalizedString {
+Add-Member -InputObject ${scoop-i18n} -MemberType ScriptMethod Get_LocalizedString {
     param(
         [string]$InputString,
         [System.Object]$TranslationMap = ${scoop-i18n}.i18n
@@ -126,7 +127,7 @@ function script:Write-Host {
         [System.ConsoleColor]$BackgroundColor
     )
 
-    if ($Object -is [string]) {
+    if (${scoop-i18n}.Id -eq "abgox.scoop-i18n" -and $Object -is [string]) {
         # Update shims
         if ($Object) {
             $pathList = @(
@@ -168,7 +169,7 @@ function script:Write-Host {
             $Object = $Object -replace "' or '", ${scoop-i18n}.i18n["' or '"]
         }
 
-        $Object = $pad + (Get-LocalizedString $Object)
+        $Object = $pad + ${scoop-i18n}.Get_LocalizedString($Object)
     }
 
     $splatParams = @{}
@@ -195,8 +196,8 @@ function script:Write-Output {
         $InputObject
     )
 
-    if ($InputObject -is [string]) {
-        $InputObject = Get-LocalizedString $InputObject
+    if (${scoop-i18n}.Id -eq "abgox.scoop-i18n" -and $InputObject -is [string]) {
+        $InputObject = ${scoop-i18n}.Get_LocalizedString($InputObject)
     }
 
     Microsoft.PowerShell.Utility\Write-Output $InputObject
