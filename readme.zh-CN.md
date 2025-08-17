@@ -64,8 +64,8 @@
 
 |Language|Progress|
 |:-:|:-:|
-|[en-US](./i18n/en-US.json)|100%|
 |[de-DE](./i18n/de-DE.json)|0%|
+|[en-US](./i18n/en-US.json)|0%|
 |[fr-FR](./i18n/fr-FR.json)|0%|
 |[ja-JP](./i18n/ja-JP.json)|0%|
 |[ko-KR](./i18n/ko-KR.json)|0%|
