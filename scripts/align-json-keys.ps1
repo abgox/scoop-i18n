@@ -1,8 +1,8 @@
 ﻿#Requires -Version 7.0
 
-$baseJson = Get-Content "$PSScriptRoot\..\i18n\en-US.json" -Raw | ConvertFrom-Json -AsHashtable
+$baseJson = Get-Content "$PSScriptRoot\..\i18n-template.json" -Raw | ConvertFrom-Json -AsHashtable
 
-Get-ChildItem "$PSScriptRoot\..\i18n" -Exclude "en-US.json" | ForEach-Object {
+Get-ChildItem "$PSScriptRoot\..\i18n" | ForEach-Object {
     try {
         $targetJson = Get-Content $_.FullName -Raw -ErrorAction SilentlyContinue | ConvertFrom-Json -AsHashtable -ErrorAction Stop
     }

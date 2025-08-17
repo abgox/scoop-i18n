@@ -10,7 +10,10 @@ if ($OldKeys.Length -ne $NewKeys.Length) {
     exit 1
 }
 
-Get-ChildItem "$PSScriptRoot\..\i18n" | ForEach-Object {
+$files = Get-ChildItem "$PSScriptRoot\..\i18n"
+$files += Get-Item "$PSScriptRoot\..\i18n-template.json"
+
+$files | ForEach-Object {
     try {
         $targetJson = Get-Content $_.FullName -Raw -ErrorAction SilentlyContinue | ConvertFrom-Json -AsHashtable -ErrorAction Stop
     }
