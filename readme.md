@@ -1,4 +1,4 @@
-<h1 align="center">✨ scoop-i18n ✨</h1>
+<h1 align="center">✨ <a href="https://scoop-i18n.abgox.com">scoop-i18n</a> ✨</h1>
 
 <p align="center">
     <a href="readme.md">English</a> |
@@ -25,7 +25,7 @@
 ---
 
 <p align="center">
-  <strong>If you like this project, please give it a star ⭐️</strong>
+  <strong>Star ⭐️ or <a href="https://abgox.com/donate">Donate 💰</a> if you like it!</strong>
 </p>
 
 ## Introduce
