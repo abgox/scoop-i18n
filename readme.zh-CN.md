@@ -25,17 +25,17 @@
 ---
 
 <p align="center">
-  <strong>如果你喜欢这个项目，请给它一个 ⭐️ 或 <a href="https://abgox.com/donate">赞赏 💰</a></strong>
+  <strong>喜欢这个项目？请给它一个 ⭐️ 或 <a href="https://abgox.com/donate">赞赏 💰</a></strong>
 </p>
 
 ## 介绍
 
-一个为 [Scoop](https://scoop.sh/) 设计的国际化工具，帮助不同语言的用户更轻松地使用 Scoop
+[Scoop](https://scoop.sh/) 的国际化解决方案(语言包)，帮助不同语言的用户更轻松地使用 Scoop
 
-- 🚀 无侵入性: 不修改 Scoop 源代码
+- 🚀 无侵入性: 通过 Hook 机制，不修改 Scoop 源代码，无任何副作用
 - 🌍 多语言覆盖: 支持多种语言，持续扩展中
 
-## 安装
+## 使用
 
 1. 添加 [abyss](https://abyss.abgox.com) (使用 [Github](https://github.com/abgox/abyss) 或 [Gitee](https://gitee.com/abgox/abyss) 仓库)
 
@@ -53,12 +53,16 @@
    scoop install abyss/abgox.scoop-i18n
    ```
 
-## 语言
+3. 安装完成后，运行 `scoop` 相关命令的输出将转换为 `$PSUICulture` 对应的语言
 
-> [!Tip]
->
-> - 默认会选择 `$PSUICulture`，如果不可用，则会选择 `en-US`
-> - 可以通过 `scoop config abgox-scoop-i18n-language <language>` 指定语言
+   - 如果不可用，则回退到 `en-US`
+   - 也可以通过以下命令指定语言:
+
+     ```shell
+     scoop config abgox-scoop-i18n-language zh-CN
+     ```
+
+## 语言
 
 <!-- prettier-ignore-start -->
 

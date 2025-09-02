@@ -1,8 +1,8 @@
 <h1 align="center">✨ <a href="https://scoop-i18n.abgox.com">scoop-i18n</a> ✨</h1>
 
 <p align="center">
-    <a href="readme.md">English</a> |
     <a href="readme.zh-CN.md">简体中文</a> |
+    <a href="readme.md">English</a> |
     <a href="https://github.com/abgox/scoop-i18n">Github</a> |
     <a href="https://gitee.com/abgox/scoop-i18n">Gitee</a>
 </p>
@@ -30,10 +30,10 @@
 
 ## Introduce
 
-An internationalization tool designed for [Scoop](https://scoop.sh/) to help users of different languages use Scoop more easily.
+An internationalization tool (language pack) for [Scoop](https://scoop.sh/) helps users of different languages use Scoop more easily.
 
-- 🚀 Non-intrusive: Does not modify the core code of Scoop.
-- 🌍 Multilingual coverage: Supports multiple languages and is continuously expanding.
+- 🚀 Non-intrusive: Does not modify the core code of Scoop, and no side effects.
+- 🌍 Multi-language: Supports multiple languages and is expanding.
 
 ## Usage
 
@@ -53,12 +53,16 @@ An internationalization tool designed for [Scoop](https://scoop.sh/) to help use
     scoop install abyss/abgox.scoop-i18n
     ```
 
-## Language
+3.  Then the output of `scoop` will be converted to the language corresponding to `$PSUICulture`.
 
-> [!Tip]
->
-> - By default, `$PSUICulture` will be selected. If it is not available, `en-US` will be selected.
-> - Use `scoop config abgox-scoop-i18n-language <language>` to specify the language.
+    - If unavailable, fall back to `en-US`.
+    - You can also specify the language:
+
+      ```shell
+      scoop config abgox-scoop-i18n-language zh-CN
+      ```
+
+## Language
 
 <!-- prettier-ignore-start -->
 
