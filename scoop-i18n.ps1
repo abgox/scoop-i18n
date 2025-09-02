@@ -119,8 +119,12 @@ Add-Member -InputObject ${scoop-i18n} -MemberType ScriptMethod Get_LocalizedStri
 function script:Write-Host {
     [CmdletBinding()]
     param(
+        [Alias('o')]
         $Object,
+        [Alias('n')]
         [switch]$NoNewline,
+        [Alias('s')]
+        $Separator,
         [Alias('f')]
         [System.ConsoleColor]$ForegroundColor,
         [Alias('b')]
@@ -172,33 +176,37 @@ function script:Write-Host {
         $Object = $pad + ${scoop-i18n}.Get_LocalizedString($Object)
     }
 
-    $splatParams = @{}
+    $params = @{}
 
     if ($PSBoundParameters.ContainsKey('Object')) {
-        $splatParams['Object'] = $Object
+        $params['Object'] = $Object
     }
     if ($PSBoundParameters.ContainsKey('NoNewline')) {
-        $splatParams['NoNewline'] = $NoNewline
+        $params['NoNewline'] = $NoNewline
+    }
+    if ($PSBoundParameters.ContainsKey('Separator')) {
+        $params['Separator'] = $Separator
     }
     if ($PSBoundParameters.ContainsKey('ForegroundColor')) {
-        $splatParams['ForegroundColor'] = $ForegroundColor
+        $params['ForegroundColor'] = $ForegroundColor
     }
     if ($PSBoundParameters.ContainsKey('BackgroundColor')) {
-        $splatParams['BackgroundColor'] = $BackgroundColor
+        $params['BackgroundColor'] = $BackgroundColor
     }
 
-    Microsoft.PowerShell.Utility\Write-Host @splatParams
+    Microsoft.PowerShell.Utility\Write-Host @params
 }
 
 function script:Write-Output {
     [CmdletBinding()]
     param(
-        $InputObject
+        $InputObject,
+        [switch]$NoEnumerate
     )
 
     if (${scoop-i18n}.Id -eq "abgox.scoop-i18n" -and $InputObject -is [string]) {
         $InputObject = ${scoop-i18n}.Get_LocalizedString($InputObject)
     }
 
-    Microsoft.PowerShell.Utility\Write-Output $InputObject
+    Microsoft.PowerShell.Utility\Write-Output $InputObject -NoEnumerate:$NoEnumerate
 }
