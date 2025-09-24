@@ -18,7 +18,7 @@
         <img src="https://img.shields.io/github/languages/code-size/abgox/scoop-i18n" alt="code size" />
     </a>
     <a href="https://img.shields.io/github/repo-size/abgox/scoop-i18n">
-        <img src="https://img.shields.io/github/repo-size/abgox/scoop-i18n" alt="code size" />
+        <img src="https://img.shields.io/github/repo-size/abgox/scoop-i18n" alt="repo size" />
     </a>
     <a href="https://github.com/abgox/scoop-i18n">
         <img src="https://img.shields.io/github/created-at/abgox/scoop-i18n" alt="created" />
@@ -59,7 +59,7 @@ An internationalization tool (language pack) for [Scoop](https://scoop.sh/) help
 
 ## Usage
 
-1.  Add [abyss](https://abyss.abgox.com) with [Github](https://github.com/abgox/abyss) or [Gitee](https://gitee.com/abgox/abyss) repository.
+1.  Add the [abyss](https://abyss.abgox.com) bucket via [Github](https://github.com/abgox/abyss) or [Gitee](https://gitee.com/abgox/abyss).
 
     ```shell
     scoop bucket add abyss https://github.com/abgox/abyss

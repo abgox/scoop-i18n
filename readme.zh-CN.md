@@ -18,7 +18,7 @@
         <img src="https://img.shields.io/github/languages/code-size/abgox/scoop-i18n" alt="code size" />
     </a>
     <a href="https://img.shields.io/github/repo-size/abgox/scoop-i18n">
-        <img src="https://img.shields.io/github/repo-size/abgox/scoop-i18n" alt="code size" />
+        <img src="https://img.shields.io/github/repo-size/abgox/scoop-i18n" alt="repo size" />
     </a>
     <a href="https://github.com/abgox/scoop-i18n">
         <img src="https://img.shields.io/github/created-at/abgox/scoop-i18n" alt="created" />
@@ -59,7 +59,7 @@
 
 ## 使用
 
-1. 添加 [abyss](https://abyss.abgox.com) (使用 [Github](https://github.com/abgox/abyss) 或 [Gitee](https://gitee.com/abgox/abyss) 仓库)
+1. 添加 [abyss](https://abyss.abgox.com) bucket ([Github](https://github.com/abgox/abyss) 或 [Gitee](https://gitee.com/abgox/abyss))
 
    ```shell
    scoop bucket add abyss https://github.com/abgox/abyss
