@@ -8,8 +8,8 @@
 </p>
 
 <p align="center">
-    <a href="https://img.shields.io/github/stars/abgox/scoop-i18n">
-        <img src="https://img.shields.io/github/stars/abgox/scoop-i18n" alt="code size" />
+    <a href="https://github.com/abgox/scoop-i18n">
+        <img src="https://img.shields.io/github/stars/abgox/scoop-i18n" alt="github stars" />
     </a>
     <a href="https://github.com/abgox/scoop-i18n/blob/main/license">
         <img src="https://img.shields.io/github/license/abgox/scoop-i18n" alt="license" />
