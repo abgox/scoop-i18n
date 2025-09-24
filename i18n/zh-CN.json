@@ -319,6 +319,7 @@
   "For Windows version before Windows 10 Version 1809 (OS Build 17763), Font can only be installed for all users.\nPlease use following commands to install '{0}' Font for all users.": "对于 Windows 10 Version 1809 (OS Build 17763) 之前的系统，字体只能安装给所有用户。\n请使用以下命令安装 '{0}' 字体给所有用户。",
   "Cannot uninstall '{0}' font.\nIt is currently being used by another application.\nPlease close all applications that are using it (e.g. vscode) and try again.": "卸载 {0} 字体失败。\n它当前被其他应用程序使用。\n请关闭所有使用它的应用程序 (如 vscode) 并重试。",
   "The '{0}' Font family has been uninstalled successfully, but there may be system cache that needs to be restarted to fully remove.": "{0} 字体已成功卸载，但可能存在系统缓存需要重启才能完全移除。",
+  "This will uninstall Scoop and all the programs that have been installed with Scoop!": "这将卸载 Scoop 及所有通过 Scoop 安装的程序！",
   "It requires admin permission. Please try again with admin permission.": "需要管理员权限，请尝试以管理员权限运行。",
   "'{0}' does not allow update by Scoop.": "{0} 不允许通过 Scoop 更新。",
   "Cannot find product code of '{0}'": "找不到 {0} 的产品代码。",
