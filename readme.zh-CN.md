@@ -98,6 +98,6 @@
 |[ru-RU](./i18n/ru-RU.json)|0%|
 |[zh-CN](./i18n/zh-CN.json)|100%|
 |[zh-HK](./i18n/zh-HK.json)|0%|
-|[zh-TW](./i18n/zh-TW.json)|100%|
+|[zh-TW](./i18n/zh-TW.json)|99.7%|
 
 <!-- prettier-ignore-end -->
