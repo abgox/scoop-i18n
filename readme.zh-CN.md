@@ -8,14 +8,17 @@
 </p>
 
 <p align="center">
+    <a href="https://img.shields.io/github/stars/abgox/scoop-i18n">
+        <img src="https://img.shields.io/github/stars/abgox/scoop-i18n" alt="code size" />
+    </a>
     <a href="https://github.com/abgox/scoop-i18n/blob/main/license">
         <img src="https://img.shields.io/github/license/abgox/scoop-i18n" alt="license" />
     </a>
-    <a href="https://img.shields.io/github/languages/code-size/abgox/scoop-i18n.svg">
-        <img src="https://img.shields.io/github/languages/code-size/abgox/scoop-i18n.svg" alt="code size" />
+    <a href="https://img.shields.io/github/languages/code-size/abgox/scoop-i18n">
+        <img src="https://img.shields.io/github/languages/code-size/abgox/scoop-i18n" alt="code size" />
     </a>
-    <a href="https://img.shields.io/github/repo-size/abgox/scoop-i18n.svg">
-        <img src="https://img.shields.io/github/repo-size/abgox/scoop-i18n.svg" alt="code size" />
+    <a href="https://img.shields.io/github/repo-size/abgox/scoop-i18n">
+        <img src="https://img.shields.io/github/repo-size/abgox/scoop-i18n" alt="code size" />
     </a>
     <a href="https://github.com/abgox/scoop-i18n">
         <img src="https://img.shields.io/github/created-at/abgox/scoop-i18n" alt="created" />
@@ -32,8 +35,27 @@
 
 [Scoop](https://scoop.sh/) 的国际化解决方案(语言包)，帮助不同语言的用户更轻松地使用 Scoop
 
-- 🚀 无侵入性: 通过 Hook 机制，不修改 Scoop 源代码，无任何副作用
-- 🌍 多语言覆盖: 支持多种语言，持续扩展中
+- 🚀 简单易用
+
+  - 安装简单：只需 `scoop install` 即可使用
+  - 即时设置：安装后即可使用，无需复杂配置
+
+- ⚡️ 非侵入式
+
+  - Hook 方案：通过 Hook 实现，没有修改 Scoop
+  - 无副作用：轻量且安全，不会干扰现有的设置
+
+- 🌍 多语言支持
+  - 全球友好：支持多种语言，且正在不断扩展
+  - 开源协作：欢迎社区贡献翻译和新的语言支持
+
+### 演示
+
+> [!Tip]
+>
+> 如果这里无法显示，[可前往官网查看](https://scoop-i18n.abgox.com)
+
+<video src="https://scoop-i18n.abgox.com/demo.mp4" controls></video>
 
 ## 使用
 

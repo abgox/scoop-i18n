@@ -8,14 +8,17 @@
 </p>
 
 <p align="center">
+    <a href="https://img.shields.io/github/stars/abgox/scoop-i18n">
+        <img src="https://img.shields.io/github/stars/abgox/scoop-i18n" alt="code size" />
+    </a>
     <a href="https://github.com/abgox/scoop-i18n/blob/main/license">
         <img src="https://img.shields.io/github/license/abgox/scoop-i18n" alt="license" />
     </a>
-    <a href="https://img.shields.io/github/languages/code-size/abgox/scoop-i18n.svg">
-        <img src="https://img.shields.io/github/languages/code-size/abgox/scoop-i18n.svg" alt="code size" />
+    <a href="https://img.shields.io/github/languages/code-size/abgox/scoop-i18n">
+        <img src="https://img.shields.io/github/languages/code-size/abgox/scoop-i18n" alt="code size" />
     </a>
-    <a href="https://img.shields.io/github/repo-size/abgox/scoop-i18n.svg">
-        <img src="https://img.shields.io/github/repo-size/abgox/scoop-i18n.svg" alt="code size" />
+    <a href="https://img.shields.io/github/repo-size/abgox/scoop-i18n">
+        <img src="https://img.shields.io/github/repo-size/abgox/scoop-i18n" alt="code size" />
     </a>
     <a href="https://github.com/abgox/scoop-i18n">
         <img src="https://img.shields.io/github/created-at/abgox/scoop-i18n" alt="created" />
@@ -32,8 +35,27 @@
 
 An internationalization tool (language pack) for [Scoop](https://scoop.sh/) helps users of different languages use Scoop more easily.
 
-- 🚀 Non-intrusive: Does not modify the core code of Scoop, and no side effects.
-- 🌍 Multi-language: Supports multiple languages and is expanding.
+- 🚀 Easy to Use
+
+  - Simple Install: Just `scoop install` and go!
+  - Instant Setup: Works right after installation, no complex configuration.
+
+- ⚡️ Non-Intrusive
+
+  - Hook Solution: Implemented via Hook, no changes to Scoop.
+  - No Side Effects: Lightweight & safe. Won’t break anything.
+
+- 🌍 Multi-Language Support
+  - Global Friendly: Supports multiple languages and is expanding.
+  - Open Collaboration: Welcome community contributions for translations and new language support!
+
+### Demo
+
+> [!Tip]
+>
+> If it cannot be displayed here, [you can check it on the official website.](https://scoop-i18n.abgox.com)
+
+<video src="https://scoop-i18n.abgox.com/demo.mp4" controls></video>
 
 ## Usage
 
