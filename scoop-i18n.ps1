@@ -1,11 +1,22 @@
-﻿New-Variable -Name 'scoop-i18n' -Value @{
-    Id               = "abgox.scoop-i18n"
-    Languages        = Get-ChildItem "$PSScriptRoot\i18n" -File | ForEach-Object { $_.BaseName }
-    ScoopConfigPaths = @(
-        "$env:SCOOP\config.json",
-        "$env:UserProfile\.config\scoop\config.json"
-    )
+﻿Set-StrictMode -Off
+
+New-Variable -Name 'scoop-i18n' -Value @{
+    Id        = "abgox.scoop-i18n"
+    Languages = Get-ChildItem "$PSScriptRoot\i18n" -File | ForEach-Object { $_.BaseName }
 } -Scope Script -Option ReadOnly
+
+${scoop-i18n}.scoopTempConfig = Get-Content "$PSScriptRoot\config.json" -Raw -Encoding utf8 -ErrorAction SilentlyContinue | ConvertFrom-Json
+
+if (!${scoop-i18n}.scoopTempConfig.root_path) {
+    Microsoft.PowerShell.Utility\Write-Host "Scoop does not have a root_path configuration. Please run the following command." -ForegroundColor Red
+    Microsoft.PowerShell.Utility\Write-Host "scoop config root_path ((scoop which scoop) -replace '\\apps\\scoop\\current\\bin\\scoop.ps1$')" -ForegroundColor Magenta
+    return
+}
+
+${scoop-i18n}.ScoopConfigPaths = @(
+    "$(${scoop-i18n}.scoopTempConfig.root_path)\config.json",
+    "$env:UserProfile\.config\scoop\config.json"
+)
 
 if ($PSEdition -eq 'Core') {
     Add-Member -InputObject ${scoop-i18n} -MemberType ScriptMethod ConvertFrom_JsonAsHashtable {
@@ -63,11 +74,18 @@ else {
     }
 }
 
-foreach ($_ in ${scoop-i18n}.ScoopConfigPaths) {
-    if (Test-Path $_) {
-        ${scoop-i18n}.ScoopConfig = ${scoop-i18n}.ConvertFrom_JsonAsHashtable((Get-Content $_ -Raw -Encoding utf8 -WarningAction SilentlyContinue))
+foreach ($p in ${scoop-i18n}.ScoopConfigPaths) {
+    try {
+        ${scoop-i18n}.ScoopConfig = ${scoop-i18n}.ConvertFrom_JsonAsHashtable((Get-Content $p -Raw))
         break
     }
+    catch {}
+}
+
+if (!${scoop-i18n}.ScoopConfig) {
+    Microsoft.PowerShell.Utility\Write-Host "Scoop does not have a root_path configuration. Please run the following command." -ForegroundColor Red
+    Microsoft.PowerShell.Utility\Write-Host "scoop config root_path ((scoop which scoop) -replace '\\apps\\scoop\\current\\bin\\scoop.ps1$')" -ForegroundColor Magenta
+    return
 }
 
 if (${scoop-i18n}.ScoopConfig.'abgox-scoop-i18n-language') {
@@ -81,7 +99,13 @@ if (${scoop-i18n}.Language -notin ${scoop-i18n}.Languages) {
     ${scoop-i18n}.Language = "en-US"
 }
 
-${scoop-i18n}.i18n = ${scoop-i18n}.ConvertFrom_JsonAsHashtable((Get-Content "$PSScriptRoot\i18n\$(${scoop-i18n}.Language).json" -Raw -Encoding utf8 -WarningAction SilentlyContinue))
+try {
+    ${scoop-i18n}.i18n = ${scoop-i18n}.ConvertFrom_JsonAsHashtable((Get-Content "$PSScriptRoot\i18n\$(${scoop-i18n}.Language).json" -Raw))
+}
+catch {
+    Microsoft.PowerShell.Utility\Write-Host "The i18n file for $(${scoop-i18n}.Language) not found.`nPlease reinstall abgox.scoop-i18n." -ForegroundColor Red
+    return
+}
 
 Add-Member -InputObject ${scoop-i18n} -MemberType ScriptMethod Get_LocalizedString {
     param(
@@ -134,10 +158,11 @@ function script:Write-Host {
     if (${scoop-i18n}.Id -eq "abgox.scoop-i18n" -and $Object -is [string]) {
         # Update shims
         if ($Object) {
-            $pathList = @(
-                "$env:SCOOP\apps\abgox.scoop-i18n\current\shims",
-                "$env:SCOOP_GLOBAL\apps\abgox.scoop-i18n\current\shims"
-            )
+            $pathList = @("$(${scoop-i18n}.scoopTempConfig.root_path)\apps\abgox.scoop-i18n\current\shims")
+            if (${scoop-i18n}.scoopTempConfig.global_path) {
+                $pathList += "$(${scoop-i18n}.scoopTempConfig.global_path)\apps\abgox.scoop-i18n\current\shims"
+            }
+
             $shims = $null
 
             foreach ($path in $pathList) {
@@ -148,8 +173,8 @@ function script:Write-Host {
             }
 
             if ($shims) {
-                if ($Object -eq "Updating Buckets..." -or ($Object -eq "Scoop was updated successfully!" -and (Get-Content "$env:SCOOP\shims\scoop.ps1" -Raw) -notlike "*scoop-i18n.ps1*")) {
-                    Get-ChildItem $shims | ForEach-Object { Copy-Item $_.FullName "$env:SCOOP\shims" -Force }
+                if ($Object -eq "Updating Buckets..." -or ($Object -eq "Scoop was updated successfully!" -and (Get-Content "$($(${scoop-i18n}.scoopTempConfig.root_path))\shims\scoop.ps1" -Raw) -notlike "*scoop-i18n.ps1*")) {
+                    Get-ChildItem $shims | ForEach-Object { Copy-Item $_.FullName "$($(${scoop-i18n}.scoopTempConfig.root_path))\shims" -Force }
                 }
             }
         }
