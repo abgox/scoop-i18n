@@ -9,7 +9,7 @@ ${scoop-i18n}.scoopTempConfig = Get-Content "$PSScriptRoot\config.json" -Raw -En
 
 if (!${scoop-i18n}.scoopTempConfig.root_path) {
     Microsoft.PowerShell.Utility\Write-Host "Scoop does not have a root_path configuration. Please run the following command." -ForegroundColor Red
-    Microsoft.PowerShell.Utility\Write-Host "scoop config root_path ((scoop which scoop) -replace '\\apps\\scoop\\current\\bin\\scoop.ps1$')" -ForegroundColor Magenta
+    Microsoft.PowerShell.Utility\Write-Host "scoop config root_path (scoop prefix scoop).Replace('\apps\scoop\current','')" -ForegroundColor Magenta
     return
 }
 
@@ -84,7 +84,7 @@ foreach ($p in ${scoop-i18n}.ScoopConfigPaths) {
 
 if (!${scoop-i18n}.ScoopConfig) {
     Microsoft.PowerShell.Utility\Write-Host "Scoop does not have a root_path configuration. Please run the following command." -ForegroundColor Red
-    Microsoft.PowerShell.Utility\Write-Host "scoop config root_path ((scoop which scoop) -replace '\\apps\\scoop\\current\\bin\\scoop.ps1$')" -ForegroundColor Magenta
+    Microsoft.PowerShell.Utility\Write-Host "scoop config root_path (scoop prefix scoop).Replace('\apps\scoop\current','')" -ForegroundColor Magenta
     return
 }
 
