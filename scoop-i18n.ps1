@@ -153,9 +153,9 @@ function script:Write-Host {
     if (${scoop-i18n}.Id -eq "abgox.scoop-i18n" -and $Object -is [string]) {
         # Update shims
         if ($Object) {
-            $pathList = @("$(${scoop-i18n}.scoopTempConfig.root_path)\apps\abgox.scoop-i18n\current\shims")
-            if (${scoop-i18n}.scoopTempConfig.global_path) {
-                $pathList += "$(${scoop-i18n}.scoopTempConfig.global_path)\apps\abgox.scoop-i18n\current\shims"
+            $pathList = @("$(${scoop-i18n}.ScoopConfig.root_path)\apps\abgox.scoop-i18n\current\shims")
+            if (${scoop-i18n}.ScoopConfig.global_path) {
+                $pathList += "$(${scoop-i18n}.ScoopConfig.global_path)\apps\abgox.scoop-i18n\current\shims"
             }
 
             $shims = $null
@@ -168,8 +168,8 @@ function script:Write-Host {
             }
 
             if ($shims) {
-                if ($Object -eq "Updating Buckets..." -or ($Object -eq "Scoop was updated successfully!" -and (Get-Content "$($(${scoop-i18n}.scoopTempConfig.root_path))\shims\scoop.ps1" -Raw -Encoding utf8) -notlike "*scoop-i18n.ps1*")) {
-                    Get-ChildItem $shims | ForEach-Object { Copy-Item $_.FullName "$($(${scoop-i18n}.scoopTempConfig.root_path))\shims" -Force }
+                if ($Object -eq "Updating Buckets..." -or ($Object -eq "Scoop was updated successfully!" -and (Get-Content "$($(${scoop-i18n}.ScoopConfig.root_path))\shims\scoop.ps1" -Raw -Encoding utf8) -notlike "*scoop-i18n.ps1*")) {
+                    Get-ChildItem $shims | ForEach-Object { Copy-Item $_.FullName "$($(${scoop-i18n}.ScoopConfig.root_path))\shims" -Force }
                 }
             }
         }
