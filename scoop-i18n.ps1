@@ -1,22 +1,16 @@
-﻿Set-StrictMode -Off
+﻿#Requires -Version 5.1
+
+Set-StrictMode -Off
 
 New-Variable -Name 'scoop-i18n' -Value @{
     Id        = "abgox.scoop-i18n"
     Languages = Get-ChildItem "$PSScriptRoot\i18n" -File | ForEach-Object { $_.BaseName }
+    DataFile  = "$PSScriptRoot\data.json"
 } -Scope Script -Option ReadOnly
 
-${scoop-i18n}.scoopTempConfig = Get-Content "$PSScriptRoot\config.json" -Raw -Encoding utf8 -ErrorAction SilentlyContinue | ConvertFrom-Json
-
-if (!${scoop-i18n}.scoopTempConfig.root_path) {
-    Microsoft.PowerShell.Utility\Write-Host "Scoop does not have a root_path configuration. Please run the following command." -ForegroundColor Red
-    Microsoft.PowerShell.Utility\Write-Host "scoop config root_path (scoop prefix scoop).Replace('\apps\scoop\current','')" -ForegroundColor Magenta
+if (-not (Test-Path ${scoop-i18n}.DataFile)) {
     return
 }
-
-${scoop-i18n}.ScoopConfigPaths = @(
-    "$(${scoop-i18n}.scoopTempConfig.root_path)\config.json",
-    "$env:UserProfile\.config\scoop\config.json"
-)
 
 if ($PSEdition -eq 'Core') {
     Add-Member -InputObject ${scoop-i18n} -MemberType ScriptMethod ConvertFrom_JsonAsHashtable {
@@ -74,17 +68,18 @@ else {
     }
 }
 
-foreach ($p in ${scoop-i18n}.ScoopConfigPaths) {
-    try {
-        ${scoop-i18n}.ScoopConfig = ${scoop-i18n}.ConvertFrom_JsonAsHashtable((Get-Content $p -Raw))
-        break
-    }
-    catch {}
+${scoop-i18n}.ScoopConfigFile = Get-Content ${scoop-i18n}.DataFile -Raw -Encoding utf8 | ConvertFrom-Json | Select-Object -ExpandProperty 'configFile'
+
+try {
+    ${scoop-i18n}.ScoopConfig = ${scoop-i18n}.ConvertFrom_JsonAsHashtable((Get-Content ${scoop-i18n}.ScoopConfigFile -Raw -Encoding utf8))
+}
+catch {
+    Microsoft.PowerShell.Utility\Write-Host "Failed to get the scoop configuration.`nPlease reinstall abgox.scoop-i18n via scoop." -ForegroundColor Red
+    return
 }
 
-if (!${scoop-i18n}.ScoopConfig) {
-    Microsoft.PowerShell.Utility\Write-Host "Scoop does not have a root_path configuration. Please run the following command." -ForegroundColor Red
-    Microsoft.PowerShell.Utility\Write-Host "scoop config root_path (scoop prefix scoop).Replace('\apps\scoop\current','')" -ForegroundColor Magenta
+if (-not ${scoop-i18n}.ScoopConfig.root_path) {
+    Microsoft.PowerShell.Utility\Write-Host "Scoop does not have a root_path configuration.`nPlease reinstall abgox.scoop-i18n via scoop." -ForegroundColor Red
     return
 }
 
@@ -100,10 +95,10 @@ if (${scoop-i18n}.Language -notin ${scoop-i18n}.Languages) {
 }
 
 try {
-    ${scoop-i18n}.i18n = ${scoop-i18n}.ConvertFrom_JsonAsHashtable((Get-Content "$PSScriptRoot\i18n\$(${scoop-i18n}.Language).json" -Raw))
+    ${scoop-i18n}.i18n = ${scoop-i18n}.ConvertFrom_JsonAsHashtable((Get-Content "$PSScriptRoot\i18n\$(${scoop-i18n}.Language).json" -Raw -Encoding utf8))
 }
 catch {
-    Microsoft.PowerShell.Utility\Write-Host "The i18n file for $(${scoop-i18n}.Language) not found.`nPlease reinstall abgox.scoop-i18n." -ForegroundColor Red
+    Microsoft.PowerShell.Utility\Write-Host "The i18n file for $(${scoop-i18n}.Language) not found.`nPlease reinstall abgox.scoop-i18n via scoop." -ForegroundColor Red
     return
 }
 
@@ -173,7 +168,7 @@ function script:Write-Host {
             }
 
             if ($shims) {
-                if ($Object -eq "Updating Buckets..." -or ($Object -eq "Scoop was updated successfully!" -and (Get-Content "$($(${scoop-i18n}.scoopTempConfig.root_path))\shims\scoop.ps1" -Raw) -notlike "*scoop-i18n.ps1*")) {
+                if ($Object -eq "Updating Buckets..." -or ($Object -eq "Scoop was updated successfully!" -and (Get-Content "$($(${scoop-i18n}.scoopTempConfig.root_path))\shims\scoop.ps1" -Raw -Encoding utf8) -notlike "*scoop-i18n.ps1*")) {
                     Get-ChildItem $shims | ForEach-Object { Copy-Item $_.FullName "$($(${scoop-i18n}.scoopTempConfig.root_path))\shims" -Force }
                 }
             }
