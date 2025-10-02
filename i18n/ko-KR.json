@@ -316,6 +316,8 @@
   "'{0}' not found.": "'{0}'을(를) 찾을 수 없습니다.",
   "Running the uninstaller: {0}": "제거 프로그램 실행 중: {0}",
   "The uninstaller may require some manual operations.": "제거 프로그램에 일부 수동 작업이 필요할 수 있습니다.",
+  "'{0}' is renamed to '{1}'.": "",
+  "'{0}' is deprecated.": "",
   "For Windows version before Windows 10 Version 1809 (OS Build 17763), Font can only be installed for all users.\nPlease use following commands to install '{0}' Font for all users.": "Windows 10 버전 1809(OS 빌드 17763) 이전 버전의 Windows에서는 모든 사용자를 위해만 글꼴을 설치할 수 있습니다.\n'{0}' 글꼴을 모든 사용자에게 설치하려면 다음 명령을 사용하세요.",
   "Cannot uninstall '{0}' font.\nIt is currently being used by another application.\nPlease close all applications that are using it (e.g. vscode) and try again.": "'{0}' 글꼴을 제거할 수 없습니다.\n현재 다른 애플리케이션에서 사용 중입니다.\n사용 중인 모든 애플리케이션(예: vscode)을 닫고 다시 시도하세요.",
   "The '{0}' Font family has been uninstalled successfully, but there may be system cache that needs to be restarted to fully remove.": "'{0}' 글꼴 패밀리가 성공적으로 제거되었지만, 완전히 제거하려면 시스템 캐시를 지우기 위해 재시작이 필요할 수 있습니다.",
