@@ -305,7 +305,7 @@
   "Adding {0} to system environment variable {1}.": "Добавление {0} в системную переменную окружения {1}.",
   "Removing {0} from user environment variable {1}.": "Удаление {0} из пользовательской переменной окружения {1}.",
   "Removing {0} from system environment variable {1}.": "Удаление {0} из системной переменной окружения {1}.",
-  "You should use 'abyss' as the bucket name, but the current name is '{0}'.": "Рекомендуется использовать 'abyss' как имя репозитория, но текущее имя — '{0}'.",
+  "You should use '{0}' as the bucket name, but the current name is '{1}'.": "Рекомендуется использовать '0' как имя репозитория, но текущее имя — '{1}'.",
   "{0} requires admin permission to create SymbolicLink.": "{0} требует прав администратора для создания SymbolicLink.",
   "Stopping the process: {0}": "Остановка процесса: {0}",
   "Stopping the service: {0}": "Остановка службы: {0}",

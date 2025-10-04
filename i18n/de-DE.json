@@ -305,7 +305,7 @@
   "Adding {0} to system environment variable {1}.": "Füge {0} zu System-Umgebungsvariable {1} hinzu.",
   "Removing {0} from user environment variable {1}.": "Entferne {0} aus Benutzer-Umgebungsvariable {1}.",
   "Removing {0} from system environment variable {1}.": "Entferne {0} aus System-Umgebungsvariable {1}.",
-  "You should use 'abyss' as the bucket name, but the current name is '{0}'.": "'abyss' sollte als Bucket-Name verwendet werden, aktueller Name ist '{0}'.",
+  "You should use '{0}' as the bucket name, but the current name is '{1}'.": "'{0}' sollte als Bucket-Name verwendet werden, aktueller Name ist '{1}'.",
   "{0} requires admin permission to create SymbolicLink.": "{0} benötigt Admin-Rechte für SymbolicLink-Erstellung.",
   "Stopping the process: {0}": "Stoppe Prozess: {0}",
   "Stopping the service: {0}": "Stoppe Dienst: {0}",

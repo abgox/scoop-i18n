@@ -305,7 +305,7 @@
   "Adding {0} to system environment variable {1}.": "システム環境変数{1}に{0}を追加中。",
   "Removing {0} from user environment variable {1}.": "ユーザー環境変数{1}から{0}を削除中。",
   "Removing {0} from system environment variable {1}.": "システム環境変数{1}から{0}を削除中。",
-  "You should use 'abyss' as the bucket name, but the current name is '{0}'.": "バケット名には'abyss'を使用すべきですが、現在の名前は'{0}'です。",
+  "You should use '{0}' as the bucket name, but the current name is '{1}'.": "バケット名には'{0}'を使用すべきですが、現在の名前は'{1}'です。",
   "{0} requires admin permission to create SymbolicLink.": "{0}はSymbolicLinkを作成するために管理者権限が必要です。",
   "Stopping the process: {0}": "プロセスを停止中: {0}",
   "Stopping the service: {0}": "サービスを停止中: {0}",

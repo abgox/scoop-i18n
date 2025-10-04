@@ -305,7 +305,7 @@
   "Adding {0} to system environment variable {1}.": "將 {0} 加入系統環境變數 {1}",
   "Removing {0} from user environment variable {1}.": "從使用者環境變數 {1} 移除 {0}",
   "Removing {0} from system environment variable {1}.": "從系統環境變數 {1} 移除 {0}",
-  "You should use 'abyss' as the bucket name, but the current name is '{0}'.": "你應該使用 'abyss' 作為 bucket 名稱，但而家使用嘅係 '{0}'",
+  "You should use '{0}' as the bucket name, but the current name is '{1}'.": "你應該使用 {0} 作為 bucket 名稱，但而家使用嘅係 {1}",
   "{0} requires admin permission to create SymbolicLink.": "{0} 需要管理員權限先可以建立符號連結",
   "Stopping the process: {0}": "停止進程: {0}",
   "Stopping the service: {0}": "停止服務: {0}",
