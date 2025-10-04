@@ -74,12 +74,12 @@ try {
     ${scoop-i18n}.ScoopConfig = ${scoop-i18n}.ConvertFrom_JsonAsHashtable((Get-Content ${scoop-i18n}.ScoopConfigFile -Raw -Encoding utf8))
 }
 catch {
-    Microsoft.PowerShell.Utility\Write-Host "Failed to get the scoop configuration.`nPlease reinstall abgox.scoop-i18n via scoop." -ForegroundColor Red
+    Microsoft.PowerShell.Utility\Write-Host "Failed to get the scoop configuration.`nPlease reinstall 'abgox.scoop-i18n'." -ForegroundColor Red
     return
 }
 
 if (-not ${scoop-i18n}.ScoopConfig.root_path) {
-    Microsoft.PowerShell.Utility\Write-Host "Scoop does not have a root_path configuration.`nPlease reinstall abgox.scoop-i18n via scoop." -ForegroundColor Red
+    Microsoft.PowerShell.Utility\Write-Host "Scoop does not have a root_path configuration.`nPlease reinstall 'abgox.scoop-i18n'." -ForegroundColor Red
     return
 }
 
@@ -98,7 +98,7 @@ try {
     ${scoop-i18n}.i18n = ${scoop-i18n}.ConvertFrom_JsonAsHashtable((Get-Content "$PSScriptRoot\i18n\$(${scoop-i18n}.Language).json" -Raw -Encoding utf8))
 }
 catch {
-    Microsoft.PowerShell.Utility\Write-Host "The i18n file for $(${scoop-i18n}.Language) not found.`nPlease reinstall abgox.scoop-i18n via scoop." -ForegroundColor Red
+    Microsoft.PowerShell.Utility\Write-Host "The i18n file for $(${scoop-i18n}.Language) not found.`nPlease reinstall 'abgox.scoop-i18n'." -ForegroundColor Red
     return
 }
 
