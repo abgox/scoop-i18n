@@ -195,7 +195,7 @@
   "ERROR: Command path does not exist: ": "ERREUR : Le chemin de la commande n'existe pas : ",
   "ERROR: Global shim not found: ": "ERREUR : Shim global introuvable : ",
   "ERROR: Local shim not found: ": "ERREUR : Shim local introuvable : ",
-  "ERROR: Invalid pattern: ": "ERREUR : Motif invalide : ",
+  "Invalid pattern: ": "Motif invalide : ",
   "But a global shim exists, ": "Mais un shim global existe, ",
   "But a local shim exists, ": "Mais un shim local existe, ",
   "run 'scoop shim info {0} --global' to show its info": "exécutez 'scoop shim info {0} --global' pour afficher ses informations",

@@ -195,7 +195,7 @@
   "ERROR: Command path does not exist: ": "错误: 命令路径不存在: ",
   "ERROR: Global shim not found: ": "错误: 全局 shim 未找到: ",
   "ERROR: Local shim not found: ": "错误: 本地(user) shim 未找到: ",
-  "ERROR: Invalid pattern: ": "错误: 无效的模式: ",
+  "Invalid pattern: ": "无效的模式: ",
   "But a global shim exists, ": "但全局 shim 已存在",
   "But a local shim exists, ": "但本地(user) shim 已存在",
   "run 'scoop shim info {0} --global' to show its info": "运行 scoop shim info {0} --global 查看它的相关信息",

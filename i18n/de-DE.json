@@ -195,7 +195,7 @@
   "ERROR: Command path does not exist: ": "FEHLER: Befehls-Pfad existiert nicht: ",
   "ERROR: Global shim not found: ": "FEHLER: Globaler Shim nicht gefunden: ",
   "ERROR: Local shim not found: ": "FEHLER: Lokaler Shim nicht gefunden: ",
-  "ERROR: Invalid pattern: ": "FEHLER: Ungültiges Muster: ",
+  "Invalid pattern: ": "Ungültiges Muster: ",
   "But a global shim exists, ": "Aber ein globaler Shim existiert, ",
   "But a local shim exists, ": "Aber ein lokaler Shim existiert, ",
   "run 'scoop shim info {0} --global' to show its info": "'scoop shim info {0} --global' zeigt dessen Informationen",

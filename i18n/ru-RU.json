@@ -195,7 +195,7 @@
   "ERROR: Command path does not exist: ": "ОШИБКА: Путь к команде не существует: ",
   "ERROR: Global shim not found: ": "ОШИБКА: Глобальный shim не найден: ",
   "ERROR: Local shim not found: ": "ОШИБКА: Локальный shim не найден: ",
-  "ERROR: Invalid pattern: ": "ОШИБКА: Недопустимый шаблон: ",
+  "Invalid pattern: ": "Недопустимый шаблон: ",
   "But a global shim exists, ": "Но глобальный shim существует, ",
   "But a local shim exists, ": "Но локальный shim существует, ",
   "run 'scoop shim info {0} --global' to show its info": "выполните 'scoop shim info {0} --global' для просмотра информации",

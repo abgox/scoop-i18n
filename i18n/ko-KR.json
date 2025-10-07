@@ -195,7 +195,7 @@
   "ERROR: Command path does not exist: ": "오류: 명령어 경로가 존재하지 않음: ",
   "ERROR: Global shim not found: ": "오류: 전역 shim을 찾을 수 없음: ",
   "ERROR: Local shim not found: ": "오류: 로컬 shim을 찾을 수 없음: ",
-  "ERROR: Invalid pattern: ": "오류: 잘못된 패턴: ",
+  "Invalid pattern: ": "잘못된 패턴: ",
   "But a global shim exists, ": "하지만 전역 shim이 존재합니다, ",
   "But a local shim exists, ": "하지만 로컬 shim이 존재합니다, ",
   "run 'scoop shim info {0} --global' to show its info": "정보를 보려면 'scoop shim info {0} --global' 실행",

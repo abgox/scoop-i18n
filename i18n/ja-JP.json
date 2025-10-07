@@ -195,7 +195,7 @@
   "ERROR: Command path does not exist: ": "エラー: コマンドパスが存在しません: ",
   "ERROR: Global shim not found: ": "エラー: グローバルshimが見つかりません: ",
   "ERROR: Local shim not found: ": "エラー: ローカルshimが見つかりません: ",
-  "ERROR: Invalid pattern: ": "エラー: 無効なパターン: ",
+  "Invalid pattern: ": "無効なパターン: ",
   "But a global shim exists, ": "しかしグローバルshimが存在します, ",
   "But a local shim exists, ": "しかしローカルshimが存在します, ",
   "run 'scoop shim info {0} --global' to show its info": "情報を表示するには'scoop shim info {0} --global'を実行してください",
