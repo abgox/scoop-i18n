@@ -233,6 +233,8 @@
   // #region libexec/scoop-bucket.ps1
 
   "No bucket found. Please run 'scoop bucket add main' to add the default 'main' bucket.": "",
+  "Unknown bucket '{0}'. Try specifying <repo>.": "",
+  "scoop bucket: cmd '{0}' not supported": "",
 
   // #endregion libexec/scoop-bucket.ps1
 
@@ -529,6 +531,7 @@
   // #region bin/uninstall.ps1
 
   "This will uninstall Scoop and all the programs that have been installed with Scoop!": "",
+  "This will uninstall Scoop, all the programs that have been installed with Scoop and all persisted data!": "",
 
   // #endregion bin/uninstall.ps1
 
