@@ -1,12 +1,15 @@
 {
-  "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
   "filename-lint.enabled": true,
+  "filename-lint.excludePatterns": ["**/.github/ISSUE_TEMPLATE", "readme.*.md"],
   "filename-lint.includePatterns": [
     "**/.github/**",
     "**/.vscode/**",
     "scripts/**",
     "*"
   ],
-  "filename-lint.excludePatterns": ["**/.github/ISSUE_TEMPLATE", "readme.*.md"]
+  "files.associations": {
+    "i18n-template.json": "jsonc"
+  }
 }
