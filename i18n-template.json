@@ -2,100 +2,160 @@
   "ERROR": "",
   "WARN": "",
   "INFO": "",
+
+  // #region general
+
+  "Scoop is out of date.": "",
+  "<{0}> missing": "",
   "scoop: '{0}' isn't a scoop command. See 'scoop help'.": "",
+  "'{0}' is not one of available subcommands: {1}": "",
+  "scoop {0}: Option -{1} requires an argument.": "",
+  "scoop {0}: Option -{1} not recognized.": "",
+  "<name> and <command> must be specified for subcommand 'add'": "",
+  "{0} must be specified for subcommand '{1}'": "",
   "URL {0} is not valid": "",
-  "{0} is not a valid Git URL!": "",
-  "Please see https://git-scm.com/docs/git-clone#_git_urls for valid ones.": "",
+  "Manifest doesn't specify a version.": "",
+  "Updating cache...": "",
+
+  // status
+  "OK": "",
+  "ok.": "",
+  "error.": "",
+  "done.": "",
+  " Done": "", // Extracting SQLite $Version... Done
+  "Exit code was {0}!": "",
+
+  // need admin
+  "you need admin rights to {0} global apps": "",
+  "ERROR: you need admin rights to {0} global apps": "",
+  "'{0}' ({1}) is a global app. You need admin rights to reset it. Skipping.": "",
+
+  // #endregion general
+
+  // #region lib/buckets.ps1
+
+  "Checking repo... ": "",
+  "Please contact the bucket maintainer!": "",
+  "The {0} bucket was added successfully.": "",
+  "The {0} bucket was removed successfully.": "",
+  "'{0}' bucket not found.": "",
+  "\nPlease try again or create a new issue by using the following link and paste your console output:\n{0}": "",
   "Git is required for buckets. Run 'scoop install git' and try again.": "",
+  "Please see https://git-scm.com/docs/git-clone#_git_urls for valid ones.": "",
+  "{0} is not a valid Git URL!": "",
   "The '{0}' bucket already exists. To add this bucket again, first remove it by running 'scoop bucket rm {0}'.": "",
   "Bucket {0} already exists for {1}": "",
-  "Checking repo... ": "",
   "'{0}' doesn't look like a valid git repository\n\nError given:\n{1}": "",
   "Failed to clone '{0}' to '{1}'.\n\nError given:\n{2}\n\nPlease check the repository URL or network connection and try again.": "",
-  "OK": "",
-  "Updating cache...": "",
-  "The {0} bucket was added successfully.": "",
-  "'{0}' bucket not found.": "",
-  "The {0} bucket was removed successfully.": "",
+
+  // #endregion lib/buckets.ps1
+
+  // #region lib/commands.ps1
+
   "Alias '{0}' already exists.": "",
   "File '{0}.ps1' already exists in shims directory.": "",
   "Alias '{0}' doesn't exist.": "",
   "Removing alias '{0}'...": "",
   "No alias found.": "",
-  "\"{0}\" will be deprecated. Please change your code/manifest to use \"{1}\"": "",
-  "Turn off Scoop isolated path... This may take a while, please wait.": "",
-  "Turn on Scoop isolated path ('{0}')... This may take a while, please wait.": "",
-  "SQLite cache is not supported on ARM64 platform.": "",
-  "Initializing SQLite cache in progress... This may take a while, please wait.": "",
-  "error.": "",
-  "done.": "",
-  "Exit code was {0}!": "",
+
+  // #endregion lib/commands.ps1
+
+  // #region lib/core.ps1
+
+  "Making {0}.exe a GUI binary.": "",
   "Overwriting shim ('{0}' -> '{1}') installed from {2}": "",
   "Overwriting shim ('{0}' -> '{1}')": "",
   "Can't shim '{0}': couldn't find '{1}'.": "",
-  "Making {0}.exe a GUI binary.": "",
   "Unknown shim version: '{0}'": "",
+
+  "\"{0}\" will be deprecated. Please change your code/manifest to use \"{1}\"": "",
+
   "Invalid default architecture configured. Determining default system architecture": "",
-  "'{0}' isn't installed globally, but it may be installed locally.": "",
+
   "Try again without the --global (or -g) flag instead.": "",
+  "Try again with the --global (or -g) flag instead.": "",
+  "'{0}' isn't installed globally, but it may be installed locally.": "",
   "'{0}' isn't installed.": "",
   "'{0}' isn't installed locally, but it may be installed globally.": "",
-  "Try again with the --global (or -g) flag instead.": "",
   "'{0}' isn't installed correctly.": "",
   "Skipping self-update of Scoop Core until {0}...": "",
+
+  // hold/unhold
   "If you want to update Scoop Core immediately, use 'scoop unhold scoop; scoop update'.": "",
   "Self-update of Scoop Core is enabled again!": "",
   "'hold_update_until' has been set in the wrong format and was removed.": "",
   "If you want to disable self-update of Scoop Core for a moment,": "",
   "use 'scoop hold scoop' or 'scoop config hold_update_until <YYYY-MM-DD>/<YYYY/MM/DD>'.": "",
+
+  // config: use_isolated_path
+  "Turn off Scoop isolated path... This may take a while, please wait.": "",
+  "Turn on Scoop isolated path ('{0}')... This may take a while, please wait.": "",
+
+  // config: use_sqlite_cache
+  "SQLite cache is not supported on ARM64 platform.": "",
+  "Initializing SQLite cache in progress... This may take a while, please wait.": "",
+
+  // #endregion lib/core.ps1
+
+  // #region lib/database.ps1
+
+  // config: use_sqlite_cache
   "Downloading SQLite {0}...": "",
   "Extracting SQLite {0}...": "",
-  " Done": "",
-  "Extracting ": "",
-  "\nCannot find external 7-Zip (7z.exe) while 'use_external_7zip' is 'true'!\nRun 'scoop config use_external_7zip false' or install 7-Zip manually and try again.": "",
+
+  // #endregion lib/database.ps1
+
+  // #region lib/decompress.ps1
+
+  "Extracting ": "", // Extracting {0} ... done.
+
   "Failed to extract files from {0}.\nLog file:\n  {1}\n{2}": "",
   "Failed to list files in {0}.\nNot a 7-Zip supported archive file.": "",
+
+  "\nCannot find external 7-Zip (7z.exe) while 'use_external_7zip' is 'true'!\nRun 'scoop config use_external_7zip false' or install 7-Zip manually and try again.": "",
+
+  // #endregion lib/decompress.ps1
+
+  // #region lib/depends.ps1
+
   "Bucket '{0}' not added. Add it with 'scoop bucket add {0}' or 'scoop bucket add {0} <repo>'.": "",
   "Bucket '{0}' not added. Add it with 'scoop bucket add {0} <repo>'.": "",
-  "Couldn't find manifest for '{0}' from '{1}' bucket.": "",
-  "Couldn't find manifest for '{0}' at '{1}'.": "",
-  "Couldn't find manifest for '{0}'.": "",
   "Circular dependency detected: '{0}' -> '{1}'.": "",
-  "Unknown charset": "",
-  "Windows Defender may slow down or disrupt installs with realtime scanning.": "",
-  "  Consider running:": "",
-  "  (Requires 'sudo' command. Run 'scoop install sudo' if you don't have it.)": "",
-  "Main bucket is not added.": "",
-  "  run 'scoop bucket add main'": "",
-  "This version of Windows does not support configuration of LongPaths.": "",
-  "LongPaths support is not enabled.": "",
-  "  You can enable it by running:": "",
-  "Windows Developer Mode is not enabled. Operations relevant to symlinks may fail without proper rights.": "",
-  "  You may read more about the symlinks support here:": "",
+
+  // #endregion lib/depends.ps1
+
+  // #region lib/download.ps1
+
   "Cache is being ignored.": "",
-  "SourceForge.net is known for causing hash validation fails. Please try again before opening a ticket.": "",
-  "Please contact the bucket maintainer!": "",
-  "\nPlease try again or create a new issue by using the following link and paste your console output:\n{0}": "",
-  "Loading {0} from cache": "",
+
   "Token might be misconfigured.": "",
+
   "Following redirect to {0}...": "",
   "Downloading {0} {1}...": "",
-  "Loading ": "",
-  " from cache.": "",
-  "Starting download with aria2 ...": "",
   "\rDownload: {0}": "",
   "Download failed! (Error {0}) {1}": "",
   "Fallback to default downloader ...": "",
+  "SourceForge.net is known for causing hash validation fails. Please try again before opening a ticket.": "",
   "Failed to use proxy '{0}': {1}": "",
   "GitHub API rate limit reached.\r\nPlease try again later or configure your API token using 'scoop config gh_token <your token>'.": "",
   "Couldn't find hash in manifest for '{0}'.": "",
+
+  "Starting download with aria2 ...": "",
+  "Loading {0} from cache": "",
+
   "Warning: No hash in manifest. SHA256 for '{0}' is:\n    {1}": "",
   "Checking hash of ": "",
   "Hash type '{0}' isn't supported.": "",
   "Hash check failed!\n{0}": "",
-  "ok.": "",
+
+  // #endregion lib/download.ps1
+
+  // #region lib/install.ps1
+
   "This is a nightly version. Downloaded files won't be verified.": "",
-  "Manifest doesn't specify a version.": "",
+  "Couldn't find manifest for '{0}' from '{1}' bucket.": "",
+  "Couldn't find manifest for '{0}' at '{1}'.": "",
+  "Couldn't find manifest for '{0}'.": "",
   "Manifest version has unsupported character '{0}'.": "",
   "'{0}' doesn't support current architecture!": "",
   "Manifest: {0}.json": "",
@@ -106,6 +166,7 @@
   "{0} is missing.": "",
   "Uninstallation aborted.": "",
   "Installation aborted. You might need to run 'scoop uninstall {0}' before trying again.": "",
+
   "Running {0} script...": "",
   "Creating shim for '{0}'.": "",
   "Can't shim '{0}': File doesn't exist.": "",
@@ -114,16 +175,23 @@
   "Linking {0} => {1}": "",
   "Error: Version 'current' is not allowed!": "",
   "Unlinking {0}": "",
-  "Installer added '{0}' to system path. You might want to remove this manually (requires admin permission).": "",
   "Installer added '{0}' to path. Removing.": "",
+  "Installer added '{0}' to system path. You might want to remove this manually (requires admin permission).": "",
   "Notes": "",
   "Repair previous failed installation of {0}.": "",
   "Purging previous failed installation of {0}.": "",
+
+  // '{0}' suggests installing '{1}' or '{2}' or '{3}'.
   "'{0}' suggests installing '{1}'.": "",
   "' or '": "",
+
   "Persisting {0}": "",
   "The following instances of \"{0}\" are still running. Scoop is configured to ignore this condition.": "",
   "The following instances of \"{0}\" are still running. Close them and try again.": "",
+
+  // #endregion lib/install.ps1
+
+  // #region lib/manifest.ps1
   "Error parsing JSON at '{0}'.": "",
   "Multiple buckets contain manifest '{0}', the current selection is '{1}'.": "",
   "Given version ({0}) does not match manifest ({1})": "",
@@ -131,88 +199,162 @@
   "'{0}' does not have autoupdate capability\r\ncouldn't find manifest for '{1}'": "",
   "Could not install {0}": "",
   "Invalid manifest: The 'name' property is missing from 'psmodule'.": "",
+
+  // #endregion lib/manifest.ps1
+
+  // #region lib/psmodules.ps1
+
   "Installing PowerShell module '{0}'": "",
-  "{0} already exists. It will be replaced.": "",
   "Uninstalling PowerShell module '{0}'.": "",
-  "Adding {0} to global PowerShell module path.": "",
+  "{0} already exists. It will be replaced.": "",
   "Adding {0} to your PowerShell module path.": "",
+  "Adding {0} to global PowerShell module path.": "",
+
+  // #endregion lib/psmodules.ps1
+
+  // #region lib/shortcuts.ps1
+
   "Creating shortcut for {0} ({1}) failed: Couldn't find {2}": "",
   "Creating shortcut for {0} ({1}) failed: Couldn't find icon {2}": "",
   "Creating shortcut for {0} ({1})": "",
   "Removing shortcut {0}": "",
-  "Adding {0} to global path.": "",
+
+  // #endregion lib/shortcuts.ps1
+
+  // #region lib/system.ps1
+
   "Adding {0} to your path.": "",
-  "Removing {0} from global path.": "",
+  "Adding {0} to global path.": "",
   "Removing {0} from your path.": "",
-  "<{0}> missing": "",
-  "'{0}' is not one of available subcommands: {1}": "",
-  "scoop {0}: Option -{1} requires an argument.": "",
-  "scoop {0}: Option -{1} not recognized.": "",
-  "<name> and <command> must be specified for subcommand 'add'": "",
-  "{0} must be specified for subcommand '{1}'": "",
+  "Removing {0} from global path.": "",
+
+  // #endregion lib/system.ps1
+
+  // #region libexec/scoop-bucket.ps1
+
   "No bucket found. Please run 'scoop bucket add main' to add the default 'main' bucket.": "",
+
+  // #endregion libexec/scoop-bucket.ps1
+
+  // #region libexec/scoop-cache.ps1
+
   "Total: {0} files{1}": "",
   "Total: {0} file{1}": "",
   "Removing {0}...": "",
   "Deleted: {0} files{1}": "",
   "Deleted: {0} file{1}": "",
-  "'7-Zip' is not installed! It's required for unpacking most programs. Please Run 'scoop install 7zip'.": "",
-  "'Inno Setup Unpacker' is not installed! It's required for unpacking InnoSetup files. Please run 'scoop install innounp'.": "",
-  "'dark' is not installed! It's required for unpacking installers created with the WiX Toolset. Please run 'scoop install dark' or 'scoop install wixtoolset'.": "",
-  "Scoop requires an NTFS volume to work! Please point $env:SCOOP_GLOBAL or 'global_path' variable in '~/.config/scoop/config.json' to another Drive.": "",
-  "Scoop requires an NTFS volume to work! Please point $env:SCOOP or 'root_path' variable in '~/.config/scoop/config.json' to another Drive.": "",
-  "Found {0} potential problem.": "",
-  "Found {0} potential problems.": "",
-  "Found {0} performance problem.": "",
-  "Found {0} performance problems.": "",
-  "Security is more important than performance, in most cases.": "",
-  "No problems identified!": "",
-  "you need admin rights to {0} global apps": "",
-  "ERROR: you need admin rights to {0} global apps": "",
+
+  // #endregion libexec/scoop-cache.ps1
+
+  // #region libexec/scoop-cleanup.ps1
+
   "{0} is already clean": "",
   "Everything is shiny now": "",
+
+  // #endregion libexec/scoop-cleanup.ps1
+
+  // #region libexec/scoop-config.ps1
+
   "'{0}' has been removed": "",
   "'{0}' has been set to '{1}'": "",
   "'{0}' is not set": "",
+
+  // #endregion libexec/scoop-config.ps1
+
+  // #region libexec/scoop-create.ps1
+
   "Error: {0} is not a valid URL": "",
   "Created '{0}'.": "",
-  "Scoop is out of date.": "",
+
+  // #endregion libexec/scoop-create.ps1
+
+  // #region libexec/scoop-download.ps1
+
   "Downloading '{0}' ({1}) [{2}] from {3} bucket": "",
   "Downloading '{0}' ({1}) [{2}]": "",
   "Downloading '{0}' [{1}] from {2} bucket": "",
   "Downloading '{0}' [{1}]": "",
+  "'{0}' ({1}) was downloaded successfully!": "",
   "Manifest cannot be generated with provided version": "",
   "Skipping hash verification.": "",
-  "'{0}' ({1}) was downloaded successfully!": "",
+
+  // #endregion libexec/scoop-download.ps1
+
+  // #region libexec/scoop-help.ps1
   "Usage: scoop <command> [<args>]\r\n\r\nAvailable commands are listed below.\r\n\r\nType 'scoop help <command>' to get more help for a specific command.": "",
   "scoop help: no such command '{0}'": "",
+
+  // #endregion libexec/scoop-help.ps1
+
+  // #region libexec/scoop-(un)hold.ps1
+
+  "'{0}' is already held.": "",
   "{0} is now held and might not be updated until {1}.": "",
   "'{0}' is not installed globally.": "",
   "'{0}' is not installed.": "",
-  "'{0}' is already held.": "",
   "{0} is now held and can not be updated anymore.": "",
+  "{0} is no longer held and can be updated again.": "",
+  "'{0}' is not held.": "",
+
+  // #endregion libexec/scoop-(un)hold.ps1
+
+  // #region libexec/scoop-home.ps1
   "Could not find homepage in manifest for '{0}'.": "",
   "Could not find manifest for '{0}'.": "",
-  "Input file not a valid JSON.": "",
+
+  // #endregion libexec/scoop-home.ps1
+
+  // #region libexec/scoop-info.ps1
+
   "Could not find manifest for '{0}' in local buckets.": "",
+
+  // #endregion libexec/scoop-info.ps1
+
+  // #region libexec/scoop-install.ps1 | libexec/scoop-update.ps1
+
   "'{0}' ({1}) is already installed.\nUse 'scoop update {2} --global' to install a new version.": "",
   "'{0}' ({1}) is already installed.\nUse 'scoop update {2}' to install a new version.": "",
   "'{0}' ({1}) is already installed. Skipping.": "",
+
   "Scoop uses 'aria2c' for multi-connection downloads.": "",
   "Should it cause issues, run 'scoop config aria2-enabled false' to disable it.": "",
   "To disable this warning, run 'scoop config aria2-warning-enabled false'.": "",
+
+  // #endregion libexec/scoop-install.ps1 | libexec/scoop-update.ps1
+
+  // #region libexec/scoop-list.ps1
+
   "There aren't any apps installed.": "",
   "Installed apps:": "",
   "Installed apps matching '{0}':": "",
+
+  // #endregion libexec/scoop-list.ps1
+
+  // #region libexec/scoop-prefix.ps1
+
   "Could not find app path for '{0}'.": "",
+
+  // #endregion libexec/scoop-prefix.ps1
+
+  // #region libexec/scoop-reset.ps1
+
   "'{0} ({1})' isn't installed": "",
   "'{0}' isn't installed": "",
-  "'{0}' ({1}) is a global app. You need admin rights to reset it. Skipping.": "",
   "Resetting {0} ({1}).": "",
+
+  // #endregion libexec/scoop-reset.ps1
+
+  // #region libexec/scoop-search.ps1
+
   "Results from other known buckets...\r\n(add them using 'scoop bucket add <bucket name>')": "",
   "Invalid regular expression: {0}": "",
   "Results from local buckets...": "",
   "No matches found.": "",
+
+  // #endregion libexec/scoop-search.ps1
+
+  // #region libexec/scoop-shim.ps1
+
   "Adding global shim ": "",
   "Adding local shim ": "",
   "ERROR: Command path does not exist: ": "",
@@ -223,28 +365,34 @@
   "But a local shim exists, ": "",
   "run 'scoop shim info {0} --global' to show its info": "",
   "run 'scoop shim info {0}' to show its info": "",
-  "ERROR: No alternatives of ": "",
-  " found.": "",
-  "INFO: ": "",
-  " is already from ": "",
-  ", nothing changed.": "",
-  "Use ": "",
-  " from ": "",
-  " as default...": "",
   "run 'scoop shim alter {0} --global' to alternate its source": "",
   "run 'scoop shim alter {0}' to alternate its source": "",
+
+  // #endregion libexec/scoop-shim.ps1
+
+  // #region libexec/scoop-status.ps1
+
   "Scoop out of date. Run 'scoop update' to get the latest changes.": "",
   "Scoop bucket(s) out of date. Run 'scoop update' to get the latest changes.": "",
   "Scoop is up to date.": "",
   "Everything is ok!": "",
-  "{0} is no longer held and can be updated again.": "",
-  "'{0}' is not held.": "",
+
+  // #endregion libexec/scoop-status.ps1
+
+  // #region libexec/scoop-uninstall.ps1
+
   "Uninstalling '{0}' ({1}).": "",
   "Access denied: {0}. You might need to restart.": "",
   "Couldn't remove '{0}'; it may be in use.": "",
   "Removing older version ({0}).": "",
   "Removing persisted data.": "",
   "'{0}' was uninstalled.": "",
+
+  // #endregion libexec/scoop-uninstall.ps1
+
+  // #region libexec/scoop-update.ps1
+
+  "Uninstalling '{0}' ({1})": "",
   "PowerShell 5 or later is required to run Scoop.": "",
   "Upgrade PowerShell: {0}": "",
   "Scoop uses Git to update itself. Run 'scoop install git' and try again.": "",
@@ -264,7 +412,6 @@
   "Updating '{0}' ({1} -> {2})": "",
   "Running process detected, skip updating.": "",
   "Downloading new version": "",
-  "Uninstalling '{0}' ({1})": "",
   "scoop update: --global is invalid when <app> is not specified.": "",
   "scoop update: --no-cache is invalid when <app> is not specified.": "",
   "Scoop was updated successfully!": "",
@@ -274,6 +421,11 @@
   "Updating {0} outdated apps:": "",
   "Latest versions for all apps are installed! For more information try 'scoop status'": "",
   "Updating one outdated app:": "",
+
+  // #endregion libexec/scoop-update.ps1
+
+  // #region libexec/scoop-virustotal.ps1
+
   "VirusTotal API key is not configured\n  You could get one from https://www.virustotal.com/gui/my-apikey and set with\n  scoop config virustotal_api_key <API key>": "",
   "{0}: Analysis in progress.": "",
   "{0}: Url report found.": "",
@@ -296,7 +448,43 @@
   "{0}: Url report not found. Will submit {1}": "",
   "{0}: Unable to check hash match for {1}": "",
   "{0}: File report not found for unknown reason. Manual file upload is required (instead of url submission).": "",
+
+  // #endregion libexec/scoop-virustotal.ps1
+
+  // #region libexec/scoop-which.ps1
+
   "'{0}' not found, not a scoop shim, or a broken shim.": "",
+
+  // #endregion libexec/scoop-which.ps1
+
+  // #region some specific cases
+
+  // lib/download.ps1
+  // Loading {0} from cache.
+  "Loading ": "",
+  " from cache.": "",
+
+  // libexec/scoop-shim.ps1
+  // ERROR: No alternatives of {0} found.
+  "ERROR: No alternatives of ": "",
+  " found.": "",
+
+  // libexec/scoop-shim.ps1
+  // INFO: {0} is already from {1}, nothing changed.
+  "INFO: ": "",
+  " is already from ": "",
+  ", nothing changed.": "",
+
+  // libexec/scoop-shim.ps
+  // Use {0} from {1} as default...
+  "Use ": "",
+  " from ": "",
+  " as default...": "",
+
+  // #endregion some specific cases
+
+  // #region abyss
+
   "Setting user environment variable: {0}": "",
   "Setting system environment variable: {0}": "",
   "Removing user environment variable: {0}": "",
@@ -318,18 +506,72 @@
   "The uninstaller may require some manual operations.": "",
   "'{0}' is renamed to '{1}'.": "",
   "'{0}' is deprecated.": "",
-  "For Windows version before Windows 10 Version 1809 (OS Build 17763), Font can only be installed for all users.\nPlease use following commands to install '{0}' Font for all users.": "",
-  "Cannot uninstall '{0}' font.\nIt is currently being used by another application.\nPlease close all applications that are using it (e.g. vscode) and try again.": "",
-  "The '{0}' Font family has been uninstalled successfully, but there may be system cache that needs to be restarted to fully remove.": "",
-  "This will uninstall Scoop and all the programs that have been installed with Scoop!": "",
   "It requires admin permission. Please try again with admin permission.": "",
   "'{0}' does not allow update by Scoop.": "",
   "Cannot find product code of '{0}'": "",
   "Copying {0} => {1}": "",
+
+  // font
+  "For Windows version before Windows 10 Version 1809 (OS Build 17763), Font can only be installed for all users.\nPlease use following commands to install '{0}' Font for all users.": "",
+  "Cannot uninstall '{0}' font.\nIt is currently being used by another application.\nPlease close all applications that are using it (e.g. vscode) and try again.": "",
+  "The '{0}' Font family has been uninstalled successfully, but there may be system cache that needs to be restarted to fully remove.": "",
+
+  // #endregion abyss
+
+  // other
   "ERROR: {0}": "",
   "error:{0}": "",
   "Removing {0}:": "",
   "Removing {0}": "",
   "loading {0}: {1}": "",
-  "Failed to {0} '{1}'.": ""
+  "Failed to {0} '{1}'.": "",
+
+  // #region bin/uninstall.ps1
+
+  "This will uninstall Scoop and all the programs that have been installed with Scoop!": "",
+
+  // #endregion bin/uninstall.ps1
+
+  // #region lib/description.ps1
+
+  "Unknown charset": "",
+
+  // #endregion lib/description.ps1
+
+  // #region lib/diagnostic.ps1
+
+  "Windows Defender may slow down or disrupt installs with realtime scanning.": "",
+  "  Consider running:": "",
+  "  (Requires 'sudo' command. Run 'scoop install sudo' if you don't have it.)": "",
+  "Main bucket is not added.": "",
+  "  run 'scoop bucket add main'": "",
+  "This version of Windows does not support configuration of LongPaths.": "",
+  "LongPaths support is not enabled.": "",
+  "  You can enable it by running:": "",
+  "Windows Developer Mode is not enabled. Operations relevant to symlinks may fail without proper rights.": "",
+  "  You may read more about the symlinks support here:": "",
+
+  // #endregion lib/diagnostic.ps1
+
+  // #region libexec/scoop-checkup.ps1
+
+  "'7-Zip' is not installed! It's required for unpacking most programs. Please Run 'scoop install 7zip'.": "",
+  "'Inno Setup Unpacker' is not installed! It's required for unpacking InnoSetup files. Please run 'scoop install innounp'.": "",
+  "'dark' is not installed! It's required for unpacking installers created with the WiX Toolset. Please run 'scoop install dark' or 'scoop install wixtoolset'.": "",
+  "Scoop requires an NTFS volume to work! Please point $env:SCOOP_GLOBAL or 'global_path' variable in '~/.config/scoop/config.json' to another Drive.": "",
+  "Scoop requires an NTFS volume to work! Please point $env:SCOOP or 'root_path' variable in '~/.config/scoop/config.json' to another Drive.": "",
+  "Security is more important than performance, in most cases.": "",
+  "No problems identified!": "",
+  "Found {0} potential problem.": "",
+  "Found {0} potential problems.": "",
+  "Found {0} performance problem.": "",
+  "Found {0} performance problems.": "",
+
+  // #endregion libexec/scoop-checkup.ps1
+
+  // #region libexec/scoop-import.ps1
+
+  "Input file not a valid JSON.": ""
+
+  // #endregion libexec/scoop-import.ps1
 }
