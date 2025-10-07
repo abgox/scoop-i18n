@@ -11,7 +11,6 @@ if ($OldKeys.Length -ne $NewKeys.Length) {
 }
 
 $files = Get-ChildItem "$PSScriptRoot\..\i18n"
-$files += Get-Item "$PSScriptRoot\..\i18n-template.json"
 
 $files | ForEach-Object {
     try {
