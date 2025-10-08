@@ -96,7 +96,7 @@
 |[ja-JP](./i18n/ja-JP.json)|97.92%|
 |[ko-KR](./i18n/ko-KR.json)|98.22%|
 |[ru-RU](./i18n/ru-RU.json)|97.63%|
-|[zh-CN](./i18n/zh-CN.json)|99.7%|
+|[zh-CN](./i18n/zh-CN.json)|100%|
 |[zh-HK](./i18n/zh-HK.json)|98.22%|
 |[zh-TW](./i18n/zh-TW.json)|97.92%|
 
