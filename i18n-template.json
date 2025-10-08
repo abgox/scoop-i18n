@@ -508,6 +508,7 @@
   "The uninstaller may require some manual operations.": "",
   "'{0}' is renamed to '{1}'.": "",
   "'{0}' is deprecated.": "",
+  "'{0}' is pending.": "",
   "It requires admin permission. Please try again with admin permission.": "",
   "'{0}' does not allow update by Scoop.": "",
   "Cannot find product code of '{0}'": "",
