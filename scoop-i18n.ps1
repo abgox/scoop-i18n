@@ -157,6 +157,7 @@ function script:Write-Host {
             if (${scoop-i18n}.ScoopConfig.global_path) {
                 $pathList += "$(${scoop-i18n}.ScoopConfig.global_path)\apps\abgox.scoop-i18n\current\shims"
             }
+            $pathList += "C:\ProgramData\scoop\apps\abgox.scoop-i18n\current\shims"
 
             $shims = $null
 
