@@ -297,7 +297,7 @@
   "The uninstaller may require some manual operations.": "这个卸载程序可能需要一些手动操作。",
   "'{0}' is renamed to '{1}'.": "{0} 已被重命名为 {1}",
   "'{0}' is deprecated.": "{0} 已被弃用。",
-  "'{0}' is pending.": "",
+  "'{0}' is pending.": "{0} 处于 pending 状态。",
   "It requires admin permission. Please try again with admin permission.": "需要管理员权限，请尝试以管理员权限运行。",
   "'{0}' does not allow update by Scoop.": "{0} 不允许通过 Scoop 更新。",
   "Cannot find product code of '{0}'": "找不到 {0} 的产品代码。",
