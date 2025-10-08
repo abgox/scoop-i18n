@@ -28,7 +28,7 @@
 ---
 
 <p align="center">
-  <strong>喜欢这个项目？请给它一个 ⭐️ 或 <a href="https://abgox.com/donate">赞赏 💰</a></strong>
+  <strong>喜欢这个项目？请给它一个 Star ⭐️ 或 <a href="https://abgox.com/donate">赞赏 💰</a></strong>
 </p>
 
 ## 介绍
@@ -55,7 +55,7 @@
 >
 > 如果这里无法显示，[可前往官网查看](https://scoop-i18n.abgox.com)
 
-<video src="https://scoop-i18n.abgox.com/demo.mp4" controls></video>
+<video src="https://scoop-i18n.abgox.com/demo.mp4" controls autoplay loop muted></video>
 
 ## 使用
 

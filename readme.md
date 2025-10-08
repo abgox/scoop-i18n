@@ -55,7 +55,7 @@ An internationalization tool (language pack) for [Scoop](https://scoop.sh/) help
 >
 > If it cannot be displayed here, [you can check it on the official website.](https://scoop-i18n.abgox.com)
 
-<video src="https://scoop-i18n.abgox.com/demo.mp4" controls></video>
+<video src="https://scoop-i18n.abgox.com/demo.mp4" controls autoplay loop muted></video>
 
 ## Usage
 
