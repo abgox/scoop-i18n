@@ -297,6 +297,7 @@
   "The uninstaller may require some manual operations.": "アンインストーラーには手動操作が必要な場合があります。",
   "'{0}' is renamed to '{1}'.": "",
   "'{0}' is deprecated.": "",
+  "'{0}' is pending.": "",
   "It requires admin permission. Please try again with admin permission.": "管理者権限が必要です。管理者権限で再度お試しください。",
   "'{0}' does not allow update by Scoop.": "'{0}'はScoopによる更新を許可していません。",
   "Cannot find product code of '{0}'": "'{0}'のプロダクトコードが見つかりません",

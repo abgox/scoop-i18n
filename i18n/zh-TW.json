@@ -297,6 +297,7 @@
   "The uninstaller may require some manual operations.": "解除安裝程式可能需要一些手動操作。",
   "'{0}' is renamed to '{1}'.": "",
   "'{0}' is deprecated.": "",
+  "'{0}' is pending.": "",
   "It requires admin permission. Please try again with admin permission.": "這需要管理員權限。請使用管理員權限再試一次。",
   "'{0}' does not allow update by Scoop.": "'{0}' 不允許透過 Scoop 更新。",
   "Cannot find product code of '{0}'": "找不到 '{0}' 的產品代碼",

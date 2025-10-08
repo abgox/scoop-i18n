@@ -297,6 +297,7 @@
   "The uninstaller may require some manual operations.": "Деинсталлятор может потребовать ручных действий.",
   "'{0}' is renamed to '{1}'.": "",
   "'{0}' is deprecated.": "",
+  "'{0}' is pending.": "",
   "It requires admin permission. Please try again with admin permission.": "Требуются права администратора. Повторите попытку с правами администратора.",
   "'{0}' does not allow update by Scoop.": "'{0}' не поддерживает обновление через Scoop.",
   "Cannot find product code of '{0}'": "Не удалось найти product code для '{0}'",
