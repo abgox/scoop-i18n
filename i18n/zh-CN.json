@@ -288,6 +288,7 @@
   "{0} requires admin permission to create SymbolicLink.": "{0} 需要管理员权限来创建符号链接。",
   "Stopping the process: {0}": "停止进程: {0}",
   "Stopping the service: {0}": "停止服务: {0}",
+  "Removing the service: {0}": "移除服务: {0}",
   "Running the installer: {0}": "运行安装程序: {0}",
   "The installer may require some manual operations.": "这个安装程序可能需要一些手动操作。",
   "It will be aborted if times out: {0} seconds": "如果超时({0} 秒)，将会中止",
