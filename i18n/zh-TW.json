@@ -288,6 +288,7 @@
   "{0} requires admin permission to create SymbolicLink.": "{0} 需要管理員權限才能建立 SymbolicLink。",
   "Stopping the process: {0}": "正在停止程序: {0}",
   "Stopping the service: {0}": "正在停止服務: {0}",
+  "Removing the service: {0}": "",
   "Running the installer: {0}": "正在執行安裝程式: {0}",
   "The installer may require some manual operations.": "安裝程式可能需要一些手動操作。",
   "It will be aborted if times out: {0} seconds": "若逾時將中止: {0} 秒",

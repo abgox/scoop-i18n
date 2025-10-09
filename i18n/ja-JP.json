@@ -288,6 +288,7 @@
   "{0} requires admin permission to create SymbolicLink.": "{0}はSymbolicLinkを作成するために管理者権限が必要です。",
   "Stopping the process: {0}": "プロセスを停止中: {0}",
   "Stopping the service: {0}": "サービスを停止中: {0}",
+  "Removing the service: {0}": "",
   "Running the installer: {0}": "インストーラーを実行中: {0}",
   "The installer may require some manual operations.": "インストーラーには手動操作が必要な場合があります。",
   "It will be aborted if times out: {0} seconds": "タイムアウト({0}秒)した場合、中止されます",

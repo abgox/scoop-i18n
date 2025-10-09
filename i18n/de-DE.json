@@ -288,6 +288,7 @@
   "{0} requires admin permission to create SymbolicLink.": "{0} benötigt Admin-Rechte für SymbolicLink-Erstellung.",
   "Stopping the process: {0}": "Stoppe Prozess: {0}",
   "Stopping the service: {0}": "Stoppe Dienst: {0}",
+  "Removing the service: {0}": "",
   "Running the installer: {0}": "Starte Installer: {0}",
   "The installer may require some manual operations.": "Der Installer erfordert möglicherweise manuelle Eingriffe.",
   "It will be aborted if times out: {0} seconds": "Wird bei Timeout abgebrochen: {0} Sekunden",

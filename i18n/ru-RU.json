@@ -288,6 +288,7 @@
   "{0} requires admin permission to create SymbolicLink.": "{0} требует прав администратора для создания SymbolicLink.",
   "Stopping the process: {0}": "Остановка процесса: {0}",
   "Stopping the service: {0}": "Остановка службы: {0}",
+  "Removing the service: {0}": "",
   "Running the installer: {0}": "Запуск установщика: {0}",
   "The installer may require some manual operations.": "Установщик может потребовать ручных действий.",
   "It will be aborted if times out: {0} seconds": "Процесс будет прерван по таймауту: {0} секунд",

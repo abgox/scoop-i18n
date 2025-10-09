@@ -288,6 +288,7 @@
   "{0} requires admin permission to create SymbolicLink.": "{0}은(는) SymbolicLink 생성에 관리자 권한이 필요합니다.",
   "Stopping the process: {0}": "프로세스 중지 중: {0}",
   "Stopping the service: {0}": "서비스 중지 중: {0}",
+  "Removing the service: {0}": "",
   "Running the installer: {0}": "설치 프로그램 실행 중: {0}",
   "The installer may require some manual operations.": "설치 프로그램에 일부 수동 작업이 필요할 수 있습니다.",
   "It will be aborted if times out: {0} seconds": "시간 초과 시 중단됩니다: {0}초",

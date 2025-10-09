@@ -288,6 +288,7 @@
   "{0} requires admin permission to create SymbolicLink.": "",
   "Stopping the process: {0}": "",
   "Stopping the service: {0}": "",
+  "Removing the service: {0}": "",
   "Running the installer: {0}": "",
   "The installer may require some manual operations.": "",
   "It will be aborted if times out: {0} seconds": "",
