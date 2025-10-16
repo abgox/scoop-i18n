@@ -285,7 +285,7 @@
   "Removing {0} from user environment variable {1}.": "从用户环境变量 {1} 中移除 {0}",
   "Removing {0} from system environment variable {1}.": "从系统环境变量 {1} 中移除 {0}",
   "You should use '{0}' as the bucket name, but the current name is '{1}'.": "你应该使用 {0} 作为 bucket 名称，但是目前使用的名称是 {1}",
-  "{0} requires admin permission to create SymbolicLink.": "{0} 需要管理员权限来创建符号链接。",
+  "{0} requires admin permission or developer mode to create SymbolicLink.": "{0} 需要管理员权限或开发者模式来创建符号链接。",
   "Stopping the process: {0}": "停止进程: {0}",
   "Stopping the service: {0}": "停止服务: {0}",
   "Removing the service: {0}": "移除服务: {0}",

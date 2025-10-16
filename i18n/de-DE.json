@@ -285,7 +285,7 @@
   "Removing {0} from user environment variable {1}.": "Entferne {0} aus Benutzer-Umgebungsvariable {1}.",
   "Removing {0} from system environment variable {1}.": "Entferne {0} aus System-Umgebungsvariable {1}.",
   "You should use '{0}' as the bucket name, but the current name is '{1}'.": "'{0}' sollte als Bucket-Name verwendet werden, aktueller Name ist '{1}'.",
-  "{0} requires admin permission to create SymbolicLink.": "{0} benötigt Admin-Rechte für SymbolicLink-Erstellung.",
+  "{0} requires admin permission or developer mode to create SymbolicLink.": "{0} erfordert Administratorberechtigungen oder den Entwicklermodus, um einen SymbolicLink zu erstellen.",
   "Stopping the process: {0}": "Stoppe Prozess: {0}",
   "Stopping the service: {0}": "Stoppe Dienst: {0}",
   "Removing the service: {0}": "",
