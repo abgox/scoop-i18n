@@ -14,10 +14,10 @@
     <a href="https://github.com/abgox/scoop-i18n/blob/main/license">
         <img src="https://img.shields.io/github/license/abgox/scoop-i18n" alt="license" />
     </a>
-    <a href="https://img.shields.io/github/languages/code-size/abgox/scoop-i18n">
+    <a href="https://github.com/abgox/scoop-i18n">
         <img src="https://img.shields.io/github/languages/code-size/abgox/scoop-i18n" alt="code size" />
     </a>
-    <a href="https://img.shields.io/github/repo-size/abgox/scoop-i18n">
+    <a href="https://github.com/abgox/scoop-i18n">
         <img src="https://img.shields.io/github/repo-size/abgox/scoop-i18n" alt="repo size" />
     </a>
     <a href="https://github.com/abgox/scoop-i18n">
@@ -28,7 +28,7 @@
 ---
 
 <p align="center">
-  <strong>喜欢这个项目？请给它一个 Star ⭐️ 或 <a href="https://abgox.com/donate">赞赏 💰</a></strong>
+  <strong>喜欢这个项目？请给它 Star ⭐️ 或 <a href="https://abgox.com/donate">赞赏 💰</a></strong>
 </p>
 
 ## 介绍

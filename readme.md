@@ -14,10 +14,10 @@
     <a href="https://github.com/abgox/scoop-i18n/blob/main/license">
         <img src="https://img.shields.io/github/license/abgox/scoop-i18n" alt="license" />
     </a>
-    <a href="https://img.shields.io/github/languages/code-size/abgox/scoop-i18n">
+    <a href="https://github.com/abgox/scoop-i18n">
         <img src="https://img.shields.io/github/languages/code-size/abgox/scoop-i18n" alt="code size" />
     </a>
-    <a href="https://img.shields.io/github/repo-size/abgox/scoop-i18n">
+    <a href="https://github.com/abgox/scoop-i18n">
         <img src="https://img.shields.io/github/repo-size/abgox/scoop-i18n" alt="repo size" />
     </a>
     <a href="https://github.com/abgox/scoop-i18n">
