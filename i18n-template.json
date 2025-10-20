@@ -251,7 +251,7 @@
   // #region libexec/scoop-cleanup.ps1
 
   "{0} is already clean": "",
-  "Everything is shiny now": "",
+  "Everything is shiny now!": "",
 
   // #endregion libexec/scoop-cleanup.ps1
 
