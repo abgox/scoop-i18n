@@ -150,7 +150,7 @@
   "Deleted: {0} files{1}": "Удалено: {0} файлов{1}",
   "Deleted: {0} file{1}": "Удалено: {0} файл{1}",
   "{0} is already clean": "{0} уже очищен",
-  "Everything is shiny now": "Всё в порядке!",
+  "Everything is shiny now!": "Всё в порядке!",
   "'{0}' has been removed": "'{0}' удалён",
   "'{0}' has been set to '{1}'": "'{0}' установлен в '{1}'",
   "'{0}' is not set": "'{0}' не задан",

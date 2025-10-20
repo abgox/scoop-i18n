@@ -150,7 +150,7 @@
   "Deleted: {0} files{1}": "삭제됨: {0}개 파일{1}",
   "Deleted: {0} file{1}": "삭제됨: {0}개 파일{1}",
   "{0} is already clean": "{0}은(는) 이미 정리되었습니다",
-  "Everything is shiny now": "모든 것이 깨끗해졌습니다",
+  "Everything is shiny now!": "모든 것이 깨끗해졌습니다",
   "'{0}' has been removed": "'{0}'이(가) 제거되었습니다",
   "'{0}' has been set to '{1}'": "'{0}'이(가) '{1}'(으)로 설정되었습니다",
   "'{0}' is not set": "'{0}'이(가) 설정되지 않았습니다",

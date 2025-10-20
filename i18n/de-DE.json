@@ -150,7 +150,7 @@
   "Deleted: {0} files{1}": "Gelöscht: {0} Dateien{1}",
   "Deleted: {0} file{1}": "Gelöscht: {0} Datei{1}",
   "{0} is already clean": "{0} ist bereits bereinigt",
-  "Everything is shiny now": "Alles ist jetzt in Ordnung",
+  "Everything is shiny now!": "Alles ist jetzt in Ordnung",
   "'{0}' has been removed": "'{0}' wurde entfernt",
   "'{0}' has been set to '{1}'": "'{0}' wurde auf '{1}' gesetzt",
   "'{0}' is not set": "'{0}' ist nicht gesetzt",

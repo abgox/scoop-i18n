@@ -150,7 +150,7 @@
   "Deleted: {0} files{1}": "已刪除: {0} 個檔案{1}",
   "Deleted: {0} file{1}": "已刪除: {0} 個檔案{1}",
   "{0} is already clean": "{0} 已經清理乾淨",
-  "Everything is shiny now": "現在一切正常。",
+  "Everything is shiny now!": "現在一切正常！",
   "'{0}' has been removed": "'{0}' 已被移除",
   "'{0}' has been set to '{1}'": "'{0}' 已設定為 '{1}'",
   "'{0}' is not set": "'{0}' 未設定",

@@ -150,7 +150,7 @@
   "Deleted: {0} files{1}": "已删除: {0} 个文件{1}",
   "Deleted: {0} file{1}": "已删除: {0} 个文件{1}",
   "{0} is already clean": "已经移除了 {0} 的所有旧版本",
-  "Everything is shiny now": "现在一切都焕然一新",
+  "Everything is shiny now!": "现在一切都焕然一新！",
   "'{0}' has been removed": "已移除配置项: {0}",
   "'{0}' has been set to '{1}'": "配置项 {0} 已设置为 {1}",
   "'{0}' is not set": "配置项 {0} 未设置",

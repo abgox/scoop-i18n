@@ -150,7 +150,7 @@
   "Deleted: {0} files{1}": "削除済み: {0}ファイル{1}",
   "Deleted: {0} file{1}": "削除済み: {0}ファイル{1}",
   "{0} is already clean": "{0}は既にクリーンです",
-  "Everything is shiny now": "すべて正常です",
+  "Everything is shiny now!": "すべて正常です",
   "'{0}' has been removed": "'{0}'は削除されました",
   "'{0}' has been set to '{1}'": "'{0}'は'{1}'に設定されました",
   "'{0}' is not set": "'{0}'は設定されていません",
