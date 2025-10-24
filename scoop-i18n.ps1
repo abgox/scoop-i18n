@@ -174,11 +174,11 @@ function script:Write-Host {
     if (${scoop-i18n}.Id -eq "abgox.scoop-i18n" -and $Object -is [string]) {
         # Update shims
         if ($Object) {
-            $pathList = @("$(${scoop-i18n}.ScoopConfig.root_path)\apps\abgox.scoop-i18n\current\shims")
+            $pathList = @("$(${scoop-i18n}.ScoopConfig.root_path)\apps\abgox.scoop-i18n\current\app\shims")
             if (${scoop-i18n}.ScoopConfig.global_path) {
-                $pathList += "$(${scoop-i18n}.ScoopConfig.global_path)\apps\abgox.scoop-i18n\current\shims"
+                $pathList += "$(${scoop-i18n}.ScoopConfig.global_path)\apps\abgox.scoop-i18n\current\app\shims"
             }
-            $pathList += "C:\ProgramData\scoop\apps\abgox.scoop-i18n\current\shims"
+            $pathList += "C:\ProgramData\scoop\apps\abgox.scoop-i18n\current\app\shims"
 
             $shims = $null
 
