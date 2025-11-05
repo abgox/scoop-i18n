@@ -22,7 +22,7 @@
   "you need admin rights to {0} global apps": "你需要管理员权限才能 {0} 全局应用",
   "ERROR: you need admin rights to {0} global apps": "错误: 你需要管理员权限才能 {0} 全局应用",
   "'{0}' ({1}) is a global app. You need admin rights to reset it. Skipping.": "{0} ({1}) 是一个全局应用。你需要管理员权限才能重置它。跳过。",
-  "Checking repo... ": "检查仓库... ",
+  "Checking repo... ": "检出仓库... ",
   "Please contact the bucket maintainer!": "请联系 bucket 维护者！",
   "The {0} bucket was added successfully.": "成功添加了名为 {0} 的 bucket",
   "The {0} bucket was removed successfully.": "成功移除了名为 {0} 的 bucket",
