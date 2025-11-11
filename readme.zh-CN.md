@@ -90,14 +90,14 @@
 
 |Language|Progress|
 |:-:|:-:|
-|[de-DE](./i18n/de-DE.json)|95.55%|
+|[de-DE](./i18n/de-DE.json)|96.04%|
 |[en-US](./i18n/en-US.json)|0%|
-|[fr-FR](./i18n/fr-FR.json)|96.14%|
-|[ja-JP](./i18n/ja-JP.json)|96.74%|
-|[ko-KR](./i18n/ko-KR.json)|97.03%|
-|[ru-RU](./i18n/ru-RU.json)|96.44%|
+|[fr-FR](./i18n/fr-FR.json)|96.34%|
+|[ja-JP](./i18n/ja-JP.json)|96.65%|
+|[ko-KR](./i18n/ko-KR.json)|96.95%|
+|[ru-RU](./i18n/ru-RU.json)|96.65%|
 |[zh-CN](./i18n/zh-CN.json)|100%|
-|[zh-HK](./i18n/zh-HK.json)|97.03%|
-|[zh-TW](./i18n/zh-TW.json)|96.74%|
+|[zh-HK](./i18n/zh-HK.json)|96.95%|
+|[zh-TW](./i18n/zh-TW.json)|96.65%|
 
 <!-- prettier-ignore-end -->
