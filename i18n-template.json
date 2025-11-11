@@ -18,11 +18,9 @@
   "Updating cache...": "",
 
   // status
-  "OK": "",
-  "ok.": "",
-  "error.": "",
-  "done.": "",
-  " Done": "", // Extracting SQLite $Version... Done
+  "OK.": "",
+  "Error.": "",
+  "Done.": "",
   "Exit code was {0}!": "",
 
   // need admin
@@ -101,13 +99,13 @@
 
   // config: use_sqlite_cache
   "Downloading SQLite {0}...": "",
-  "Extracting SQLite {0}...": "",
+  "Extracting SQLite {0}... ": "",
 
   // #endregion lib/database.ps1
 
   // #region lib/decompress.ps1
 
-  "Extracting ": "", // Extracting {0} ... done.
+  "Extracting {0}... ": "",
 
   "Failed to extract files from {0}.\nLog file:\n  {1}\n{2}": "",
   "Failed to list files in {0}.\nNot a 7-Zip supported archive file.": "",
@@ -134,17 +132,17 @@
   "Downloading {0} {1}...": "",
   "\rDownload: {0}": "",
   "Download failed! (Error {0}) {1}": "",
-  "Fallback to default downloader ...": "",
+  "Fallback to default downloader...": "",
   "SourceForge.net is known for causing hash validation fails. Please try again before opening a ticket.": "",
   "Failed to use proxy '{0}': {1}": "",
   "GitHub API rate limit reached.\r\nPlease try again later or configure your API token using 'scoop config gh_token <your token>'.": "",
   "Couldn't find hash in manifest for '{0}'.": "",
 
-  "Starting download with aria2 ...": "",
+  "Starting download with aria2...": "",
   "Loading {0} from cache": "",
 
   "Warning: No hash in manifest. SHA256 for '{0}' is:\n    {1}": "",
-  "Checking hash of ": "",
+  "Checking hash of {0}... ": "",
   "Hash type '{0}' isn't supported.": "",
   "Hash check failed!\n{0}": "",
 
@@ -167,7 +165,7 @@
   "Uninstallation aborted.": "",
   "Installation aborted. You might need to run 'scoop uninstall {0}' before trying again.": "",
 
-  "Running {0} script...": "",
+  "Running {0} script... ": "",
   "Creating shim for '{0}'.": "",
   "Can't shim '{0}': File doesn't exist.": "",
   "Removing shim '{0}.exe'.": "",
@@ -185,7 +183,6 @@
   "'{0}' suggests installing '{1}'.": "",
   "' or '": "",
 
-  "Persisting {0}": "",
   "The following instances of \"{0}\" are still running. Scoop is configured to ignore this condition.": "",
   "The following instances of \"{0}\" are still running. Close them and try again.": "",
 
@@ -348,7 +345,7 @@
 
   // #region libexec/scoop-search.ps1
 
-  "Results from other known buckets...\r\n(add them using 'scoop bucket add <bucket name>')": "",
+  "Results from other known buckets...\n(add them using 'scoop bucket add <bucket name>')": "",
   "Invalid regular expression: {0}": "",
   "Results from local buckets...": "",
   "No matches found.": "",
@@ -357,18 +354,16 @@
 
   // #region libexec/scoop-shim.ps1
 
-  "Adding global shim ": "",
-  "Adding local shim ": "",
-  "ERROR: Command path does not exist: ": "",
-  "ERROR: Global shim not found: ": "",
-  "ERROR: Local shim not found: ": "",
-  "Invalid pattern: ": "",
-  "But a global shim exists, ": "",
-  "But a local shim exists, ": "",
-  "run 'scoop shim info {0} --global' to show its info": "",
-  "run 'scoop shim info {0}' to show its info": "",
-  "run 'scoop shim alter {0} --global' to alternate its source": "",
-  "run 'scoop shim alter {0}' to alternate its source": "",
+  "Adding global shim {0}...": "",
+  "Adding local shim {0}...": "",
+  "Command path does not exist: {0}": "",
+  "Global shim not found: {0}": "",
+  "Local shim not found: {0}": "",
+  "Invalid pattern: {0}": "",
+  "But a global shim exists, run 'scoop shim info {0} --global' to show its info.": "",
+  "But a local shim exists, run 'scoop shim info {0}' to show its info.": "",
+  "But a global shim exists, run 'scoop shim alter {0} --global' to alternate its source.": "",
+  "But a local shim exists, run 'scoop shim alter {0}' to alternate its source.": "",
 
   // #endregion libexec/scoop-shim.ps1
 
@@ -462,26 +457,16 @@
   // #region some specific cases
 
   // lib/download.ps1
-  // Loading {0} from cache.
-  "Loading ": "",
-  " from cache.": "",
+  "Loading {0} from cache.": "",
 
   // libexec/scoop-shim.ps1
-  // ERROR: No alternatives of {0} found.
-  "ERROR: No alternatives of ": "",
-  " found.": "",
+  "No alternatives of {0} found.": "",
 
   // libexec/scoop-shim.ps1
-  // INFO: {0} is already from {1}, nothing changed.
-  "INFO: ": "",
-  " is already from ": "",
-  ", nothing changed.": "",
+  "{0} is already from {1}, nothing changed.": "",
 
-  // libexec/scoop-shim.ps
-  // Use {0} from {1} as default...
-  "Use ": "",
-  " from ": "",
-  " as default...": "",
+  // libexec/scoop-shim.ps1
+  "Use {0} from {1} as default... ": "",
 
   // #endregion some specific cases
 
@@ -497,6 +482,7 @@
   "Removing {0} from system environment variable {1}.": "",
   "You should use '{0}' as the bucket name, but the current name is '{1}'.": "",
   "{0} requires admin permission or developer mode to create SymbolicLink.": "",
+  "Persisting (Link) {0} => {1}": "",
   "Stopping the process: {0}": "",
   "Stopping the service: {0}": "",
   "Removing the service: {0}": "",
@@ -524,6 +510,7 @@
   // other
   "ERROR: {0}": "",
   "error:{0}": "",
+  "Persisting {0}": "",
   "Removing {0}:": "",
   "Removing {0}": "",
   "loading {0}: {1}": "",
