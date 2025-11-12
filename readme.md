@@ -51,11 +51,7 @@ An internationalization tool (language pack) for [Scoop](https://scoop.sh/) help
 
 ### Demo
 
-> [!Tip]
->
-> If it cannot be displayed here, [you can check it on the official website.](https://scoop-i18n.abgox.com)
-
-<video src="https://scoop-i18n.abgox.com/demo.mp4" controls autoplay loop muted></video>
+![demo](https://scoop-i18n.abgox.com/demo.gif)
 
 ## Usage
 
@@ -77,7 +73,7 @@ An internationalization tool (language pack) for [Scoop](https://scoop.sh/) help
 
 3.  Then the output of `scoop` will be converted to the language corresponding to `$PSUICulture`.
 
-    - If unavailable, fall back to `en-US`.
+    - If unavailable, it will fall back to `en-US`.
     - You can also specify the language:
 
       ```shell

@@ -51,11 +51,7 @@
 
 ### 演示
 
-> [!Tip]
->
-> 如果这里无法显示，[可前往官网查看](https://scoop-i18n.abgox.com)
-
-<video src="https://scoop-i18n.abgox.com/demo.mp4" controls autoplay loop muted></video>
+![demo](https://scoop-i18n.abgox.com/demo.gif)
 
 ## 使用
 
@@ -77,7 +73,7 @@
 
 3. 安装完成后，运行 `scoop` 相关命令的输出将转换为 `$PSUICulture` 对应的语言
 
-   - 如果不可用，则回退到 `en-US`
+   - 如果不可用，它会回退到 `en-US`
    - 也可以通过以下命令指定语言:
 
      ```shell
