@@ -99,7 +99,6 @@
 
   // config: use_sqlite_cache
   "Downloading SQLite {0}...": "",
-  "Extracting SQLite {0}... ": "",
 
   // #endregion lib/database.ps1
 
