@@ -62,7 +62,6 @@
   "SQLite cache is not supported on ARM64 platform.": "SQLiteキャッシュはARM64プラットフォームではサポートされていません。",
   "Initializing SQLite cache in progress... This may take a while, please wait.": "SQLiteキャッシュを初期化中... しばらくお待ちください。",
   "Downloading SQLite {0}...": "SQLite {0} をダウンロード中...",
-  "Extracting SQLite {0}... ": "SQLite {0} を展開中... ",
   "Extracting {0}... ": "{0} を展開中... ",
   "Failed to extract files from {0}.\nLog file:\n  {1}\n{2}": "{0} からのファイル展開に失敗しました。\nログファイル:\n  {1}\n{2}",
   "Failed to list files in {0}.\nNot a 7-Zip supported archive file.": "{0} 内のファイル一覧取得に失敗しました。\n7-Zipがサポートするアーカイブファイルではありません。",

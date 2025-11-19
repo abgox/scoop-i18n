@@ -62,7 +62,6 @@
   "SQLite cache is not supported on ARM64 platform.": "Кэш SQLite не поддерживается на платформе ARM64.",
   "Initializing SQLite cache in progress... This may take a while, please wait.": "Инициализация кэша SQLite... Это может занять время, пожалуйста, подождите.",
   "Downloading SQLite {0}...": "Загрузка SQLite {0}...",
-  "Extracting SQLite {0}... ": "Распаковка SQLite {0}...",
   "Extracting {0}... ": "Распаковка {0}...",
   "Failed to extract files from {0}.\nLog file:\n  {1}\n{2}": "Ошибка распаковки {0}.\nЛог:\n  {1}\n{2}",
   "Failed to list files in {0}.\nNot a 7-Zip supported archive file.": "Не удалось прочитать архив {0}.\nФормат не поддерживается 7-Zip.",

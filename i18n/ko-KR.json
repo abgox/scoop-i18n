@@ -62,7 +62,6 @@
   "SQLite cache is not supported on ARM64 platform.": "SQLite 캐시는 ARM64 플랫폼에서 지원되지 않습니다.",
   "Initializing SQLite cache in progress... This may take a while, please wait.": "SQLite 캐시 초기화 진행 중... 시간이 걸릴 수 있으니 기다려 주세요.",
   "Downloading SQLite {0}...": "SQLite {0} 다운로드 중...",
-  "Extracting SQLite {0}... ": "SQLite {0} 추출 중...",
   "Extracting {0}... ": "{0} 추출 중...",
   "Failed to extract files from {0}.\nLog file:\n  {1}\n{2}": "{0}에서 파일 추출 실패.\n로그 파일:\n{1}\n{2}",
   "Failed to list files in {0}.\nNot a 7-Zip supported archive file.": "{0} 내 파일 목록 가져오기 실패.\n7-Zip에서 지원하지 않는 아카이브 파일입니다.",

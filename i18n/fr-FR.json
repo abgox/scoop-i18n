@@ -62,7 +62,6 @@
   "SQLite cache is not supported on ARM64 platform.": "Le cache SQLite n'est pas pris en charge sur la plateforme ARM64.",
   "Initializing SQLite cache in progress... This may take a while, please wait.": "Initialisation du cache SQLite en cours... Cela peut prendre un moment, veuillez patienter.",
   "Downloading SQLite {0}...": "Téléchargement de SQLite {0}...",
-  "Extracting SQLite {0}... ": "Extraction de SQLite {0}... ",
   "Extracting {0}... ": "Extraction de {0}... ",
   "Failed to extract files from {0}.\nLog file:\n  {1}\n{2}": "Échec de l'extraction des fichiers depuis {0}.\nFichier de log :\n  {1}\n{2}",
   "Failed to list files in {0}.\nNot a 7-Zip supported archive file.": "Échec de la liste des fichiers dans {0}.\nLe fichier d'archive n'est pas pris en charge par 7-Zip.",

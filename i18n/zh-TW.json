@@ -62,7 +62,6 @@
   "SQLite cache is not supported on ARM64 platform.": "ARM64 平台不支援 SQLite 快取。",
   "Initializing SQLite cache in progress... This may take a while, please wait.": "正在初始化 SQLite 快取... 這可能需要一些時間，請稍候。",
   "Downloading SQLite {0}...": "正在下載 SQLite {0}...",
-  "Extracting SQLite {0}... ": "正在解壓縮 SQLite {0}...",
   "Extracting {0}... ": "正在解壓縮 {0}...",
   "Failed to extract files from {0}.\nLog file:\n  {1}\n{2}": "無法從 {0} 解壓縮檔案。\n記錄檔:\n{1}\n{2}",
   "Failed to list files in {0}.\nNot a 7-Zip supported archive file.": "無法列出 {0} 中的檔案。\n這不是 7-Zip 支援的壓縮檔。",
