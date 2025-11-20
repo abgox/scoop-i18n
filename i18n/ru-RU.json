@@ -273,6 +273,7 @@
   "Removing {0} from user environment variable {1}.": "Удаление {0} из пользовательской переменной окружения {1}.",
   "Removing {0} from system environment variable {1}.": "Удаление {0} из системной переменной окружения {1}.",
   "You should use '{0}' as the bucket name, but the current name is '{1}'.": "Рекомендуется использовать '0' как имя репозитория, но текущее имя — '{1}'.",
+  "'{0}' conflicts with '{1}'.": "",
   "{0} requires admin permission or developer mode to create SymbolicLink.": "{0} требует права администратора или режим разработчика для создания SymbolicLink.",
   "Persisting (Link) {0} => {1}": "Сохранение (Link) {0} => {1}",
   "Stopping the process: {0}": "Остановка процесса: {0}",

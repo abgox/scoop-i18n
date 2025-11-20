@@ -273,6 +273,7 @@
   "Removing {0} from user environment variable {1}.": "從使用者環境變數 {1} 移除 {0}",
   "Removing {0} from system environment variable {1}.": "從系統環境變數 {1} 移除 {0}",
   "You should use '{0}' as the bucket name, but the current name is '{1}'.": "你應該使用 {0} 作為 bucket 名稱，但而家使用嘅係 {1}",
+  "'{0}' conflicts with '{1}'.": "",
   "{0} requires admin permission or developer mode to create SymbolicLink.": "{0} 需要管理員權限或開發者模式來建立 SymbolicLink",
   "Persisting (Link) {0} => {1}": "持久化資料 (Link): {0} => {1}",
   "Stopping the process: {0}": "停止進程: {0}",

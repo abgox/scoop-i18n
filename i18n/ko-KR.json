@@ -273,6 +273,7 @@
   "Removing {0} from user environment variable {1}.": "{1} 사용자 환경 변수에서 {0} 제거 중.",
   "Removing {0} from system environment variable {1}.": "{1} 시스템 환경 변수에서 {0} 제거 중.",
   "You should use '{0}' as the bucket name, but the current name is '{1}'.": "'{0}'를 버킷 이름으로 사용해야 하지만 현재 이름은 '{1}'입니다.",
+  "'{0}' conflicts with '{1}'.": "",
   "{0} requires admin permission or developer mode to create SymbolicLink.": "{0}은(는) SymbolicLink를 생성하기 위해 관리자 권한 또는 개발자 모드가 필요합니다.",
   "Persisting (Link) {0} => {1}": "{0} => {1} 영속화 중",
   "Stopping the process: {0}": "프로세스 중지 중: {0}",
