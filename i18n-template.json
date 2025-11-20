@@ -480,6 +480,7 @@
   "Removing {0} from user environment variable {1}.": "",
   "Removing {0} from system environment variable {1}.": "",
   "You should use '{0}' as the bucket name, but the current name is '{1}'.": "",
+  "'{0}' conflicts with '{1}'.": "",
   "{0} requires admin permission or developer mode to create SymbolicLink.": "",
   "Persisting (Link) {0} => {1}": "",
   "Stopping the process: {0}": "",
