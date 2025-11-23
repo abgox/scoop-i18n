@@ -49,7 +49,7 @@ An internationalization tool (language pack) for [Scoop](https://scoop.sh/) help
   - Global Friendly: Supports multiple languages and is expanding.
   - Open Collaboration: Welcome community contributions for translations and new language support!
 
-### Demo
+## Demo
 
 ![demo](https://scoop-i18n.abgox.com/demo.gif)
 
