@@ -291,7 +291,7 @@
   "Copying {0} => {1}": "正在複製 {0} => {1}",
   "It requires you to uninstall it manually.": "",
   "Something went wrong here.": "",
-  "Reference: {0}": "",
+  "Refer to: {0}": "",
   "For Windows version before Windows 10 Version 1809 (OS Build 17763), Font can only be installed for all users.\nPlease use following commands to install '{0}' Font for all users.": "對於 Windows 10 版本 1809 (OS 組建 17763) 之前的 Windows 版本，字型只能為所有使用者安裝。\n請使用以下指令為所有使用者安裝 '{0}' 字型。",
   "Cannot uninstall '{0}' font.\nIt is currently being used by another application.\nPlease close all applications that are using it (e.g. vscode) and try again.": "無法解除安裝 '{0}' 字型。\n它目前正被另一個應用程式使用。\n請關閉所有使用它的應用程式 (例如 vscode) 後再試一次。",
   "The '{0}' Font family has been uninstalled successfully, but there may be system cache that needs to be restarted to fully remove.": "'{0}' 字型家族已成功解除安裝，但可能需要重新啟動系統快取才能完全移除。",

@@ -291,7 +291,7 @@
   "Copying {0} => {1}": "",
   "It requires you to uninstall it manually.": "",
   "Something went wrong here.": "",
-  "Reference: {0}": "",
+  "Refer to: {0}": "",
   "For Windows version before Windows 10 Version 1809 (OS Build 17763), Font can only be installed for all users.\nPlease use following commands to install '{0}' Font for all users.": "",
   "Cannot uninstall '{0}' font.\nIt is currently being used by another application.\nPlease close all applications that are using it (e.g. vscode) and try again.": "",
   "The '{0}' Font family has been uninstalled successfully, but there may be system cache that needs to be restarted to fully remove.": "",
