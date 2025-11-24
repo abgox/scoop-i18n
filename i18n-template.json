@@ -498,7 +498,7 @@
   "Copying {0} => {1}": "",
   "It requires you to uninstall it manually.": "",
   "Something went wrong here.": "",
-  "Reference: {0}": "",
+  "Refer to: {0}": "",
 
   // font
   "For Windows version before Windows 10 Version 1809 (OS Build 17763), Font can only be installed for all users.\nPlease use following commands to install '{0}' Font for all users.": "",
