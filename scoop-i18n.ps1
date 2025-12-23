@@ -6,12 +6,13 @@ New-Variable -Name 'scoop-i18n' -Value @{
     Id        = "abgox.scoop-i18n"
     Languages = Get-ChildItem "$PSScriptRoot\i18n" -File | ForEach-Object { $_.BaseName }
     DataFile  = "$PSScriptRoot\data.json"
-} -Scope Script -Option ReadOnly
+} -Scope Script -Option Constant -Force
 
 if (-not (Test-Path ${scoop-i18n}.DataFile)) {
     return
 }
 
+# https://github.com/abgox/ConvertFrom-JsonAsHashtable
 function ConvertFrom-JsonAsHashtable {
     [CmdletBinding()]
     param(
@@ -40,10 +41,7 @@ function ConvertFrom-JsonAsHashtable {
             return ConvertFrom-Json $jsonString -AsHashtable
         }
 
-        $jsonString = [regex]::Replace($jsonString, '(?<!\\)""\s*:', {
-                param($m)
-                '"emptyKey_' + [Guid]::NewGuid() + '":'
-            })
+        $jsonString = [regex]::Replace($jsonString, '(?<!\\)""\s*:', { '"emptyKey_' + [Guid]::NewGuid() + '":' })
 
         $jsonString = [regex]::Replace($jsonString, ',\s*(?=[}\]]\s*$)', '')
 
@@ -57,7 +55,8 @@ function ConvertFrom-JsonAsHashtable {
             # IDictionary (Hashtable, Dictionary<,>) -> @{ }
             if ($obj -is [System.Collections.IDictionary]) {
                 $ht = @{}
-                foreach ($k in $obj.Keys) {
+                $keys = $obj.Keys
+                foreach ($k in $keys) {
                     $ht[$k] = ConvertRecursively $obj[$k]
                 }
                 return $ht
@@ -66,7 +65,8 @@ function ConvertFrom-JsonAsHashtable {
             # PSCustomObject -> @{ }
             if ($obj -is [System.Management.Automation.PSCustomObject]) {
                 $ht = @{}
-                foreach ($p in $obj.PSObject.Properties) {
+                $props = $obj.PSObject.Properties
+                foreach ($p in $props) {
                     $ht[$p.Name] = ConvertRecursively $p.Value
                 }
                 return $ht
@@ -159,96 +159,92 @@ Add-Member -InputObject ${scoop-i18n} -MemberType ScriptMethod Get_LocalizedStri
 function script:Write-Host {
     [CmdletBinding()]
     param(
-        [Alias('o')]
+        [Parameter(
+            Position = 0,
+            ValueFromPipeline = $true
+        )]
+        [Alias('Msg', 'Message')]
         $Object,
-        [Alias('n')]
+
         [switch]$NoNewline,
-        [Alias('s')]
+
         $Separator,
-        [Alias('f')]
+
         [System.ConsoleColor]$ForegroundColor,
-        [Alias('b')]
+
         [System.ConsoleColor]$BackgroundColor
     )
 
-    if (${scoop-i18n}.Id -eq "abgox.scoop-i18n" -and $Object -is [string]) {
-        # Update shims
-        if ($Object) {
-            $pathList = @("$(${scoop-i18n}.ScoopConfig.root_path)\apps\abgox.scoop-i18n\current\app\shims")
-            if (${scoop-i18n}.ScoopConfig.global_path) {
-                $pathList += "$(${scoop-i18n}.ScoopConfig.global_path)\apps\abgox.scoop-i18n\current\app\shims"
-            }
-            $pathList += "C:\ProgramData\scoop\apps\abgox.scoop-i18n\current\app\shims"
+    process {
+        if (${scoop-i18n}.Id -eq "abgox.scoop-i18n" -and $Object -is [string]) {
+            # Update shims
+            if ($Object) {
+                $pathList = @("$(${scoop-i18n}.ScoopConfig.root_path)\apps\abgox.scoop-i18n\current\app\shims")
+                if (${scoop-i18n}.ScoopConfig.global_path) {
+                    $pathList += "$(${scoop-i18n}.ScoopConfig.global_path)\apps\abgox.scoop-i18n\current\app\shims"
+                }
+                $pathList += "C:\ProgramData\scoop\apps\abgox.scoop-i18n\current\app\shims"
 
-            $shims = $null
+                $shims = $null
 
-            foreach ($path in $pathList) {
-                if (Test-Path $path) {
-                    $shims = $path
-                    break
+                foreach ($path in $pathList) {
+                    if (Test-Path $path) {
+                        $shims = $path
+                        break
+                    }
+                }
+
+                if ($shims) {
+                    if ($Object -eq "Updating Buckets..." -or ($Object -eq "Scoop was updated successfully!" -and (Get-Content "$($(${scoop-i18n}.ScoopConfig.root_path))\shims\scoop.ps1" -Raw -Encoding utf8) -notlike "*scoop-i18n.ps1*")) {
+                        Get-ChildItem $shims | ForEach-Object { Copy-Item $_.FullName "$($(${scoop-i18n}.ScoopConfig.root_path))\shims" -Force }
+                    }
                 }
             }
 
-            if ($shims) {
-                if ($Object -eq "Updating Buckets..." -or ($Object -eq "Scoop was updated successfully!" -and (Get-Content "$($(${scoop-i18n}.ScoopConfig.root_path))\shims\scoop.ps1" -Raw -Encoding utf8) -notlike "*scoop-i18n.ps1*")) {
-                    Get-ChildItem $shims | ForEach-Object { Copy-Item $_.FullName "$($(${scoop-i18n}.ScoopConfig.root_path))\shims" -Force }
-                }
+            $pad = ""
+
+            if ($Object -match "^ERROR ") {
+                $Object = $Object -replace "^ERROR ", ""
+                $pad = ${scoop-i18n}.i18n.ERROR
             }
+            elseif ($Object -match "^WARN  ") {
+                $Object = $Object -replace "^WARN  ", ""
+                $pad = ${scoop-i18n}.i18n.WARN
+            }
+            elseif ($Object -match "^INFO  ") {
+                $Object = $Object -replace "^INFO  ", ""
+                $pad = ${scoop-i18n}.i18n.INFO
+            }
+
+            if ($Object -match ".*suggests installing.*' or '") {
+                $Object = $Object -replace "' or '", ${scoop-i18n}.i18n["' or '"]
+            }
+
+            $Object = $pad + ${scoop-i18n}.Get_LocalizedString($Object)
         }
 
-        $pad = ""
-
-        if ($Object -match "^ERROR ") {
-            $Object = $Object -replace "^ERROR ", ""
-            $pad = ${scoop-i18n}.i18n.ERROR
-        }
-        elseif ($Object -match "^WARN  ") {
-            $Object = $Object -replace "^WARN  ", ""
-            $pad = ${scoop-i18n}.i18n.WARN
-        }
-        elseif ($Object -match "^INFO  ") {
-            $Object = $Object -replace "^INFO  ", ""
-            $pad = ${scoop-i18n}.i18n.INFO
-        }
-
-        if ($Object -match ".*suggests installing.*' or '") {
-            $Object = $Object -replace "' or '", ${scoop-i18n}.i18n["' or '"]
-        }
-
-        $Object = $pad + ${scoop-i18n}.Get_LocalizedString($Object)
+        $PSBoundParameters['Object'] = $Object
+        Microsoft.PowerShell.Utility\Write-Host @PSBoundParameters
     }
-
-    $params = @{}
-
-    if ($PSBoundParameters.ContainsKey('Object')) {
-        $params['Object'] = $Object
-    }
-    if ($PSBoundParameters.ContainsKey('NoNewline')) {
-        $params['NoNewline'] = $NoNewline
-    }
-    if ($PSBoundParameters.ContainsKey('Separator')) {
-        $params['Separator'] = $Separator
-    }
-    if ($PSBoundParameters.ContainsKey('ForegroundColor')) {
-        $params['ForegroundColor'] = $ForegroundColor
-    }
-    if ($PSBoundParameters.ContainsKey('BackgroundColor')) {
-        $params['BackgroundColor'] = $BackgroundColor
-    }
-
-    Microsoft.PowerShell.Utility\Write-Host @params
 }
 
 function script:Write-Output {
     [CmdletBinding()]
     param(
+        [Parameter(
+            Position = 0,
+            ValueFromPipeline = $true
+        )]
+        [Alias('Input', 'Object')]
         $InputObject,
+
         [switch]$NoEnumerate
     )
 
-    if (${scoop-i18n}.Id -eq "abgox.scoop-i18n" -and $InputObject -is [string]) {
-        $InputObject = ${scoop-i18n}.Get_LocalizedString($InputObject)
+    process {
+        if (${scoop-i18n}.Id -eq "abgox.scoop-i18n" -and $InputObject -is [string]) {
+            $PSBoundParameters['InputObject'] = ${scoop-i18n}.Get_LocalizedString($InputObject)
+        }
+        Microsoft.PowerShell.Utility\Write-Output @PSBoundParameters
     }
-
-    Microsoft.PowerShell.Utility\Write-Output $InputObject -NoEnumerate:$NoEnumerate
 }
