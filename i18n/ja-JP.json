@@ -292,6 +292,8 @@
   "It requires you to uninstall it manually.": "",
   "Something went wrong here.": "",
   "Refer to: {0}": "",
+  "Commands": "",
+  "Fonts": "",
   "For Windows version before Windows 10 Version 1809 (OS Build 17763), Font can only be installed for all users.\nPlease use following commands to install '{0}' Font for all users.": "Windows 10 Version 1809 (OS Build 17763)より前のバージョンでは、フォントはすべてのユーザーに対してのみインストールできます。\n'{0}'フォントをすべてのユーザーにインストールするには、以下のコマンドを使用してください。",
   "Cannot uninstall '{0}' font.\nIt is currently being used by another application.\nPlease close all applications that are using it (e.g. vscode) and try again.": "'{0}'フォントをアンインストールできません。\n現在他のアプリケーションで使用中です。\n使用中のアプリケーション（例: vscode）をすべて閉じてから再度お試しください。",
   "The '{0}' Font family has been uninstalled successfully, but there may be system cache that needs to be restarted to fully remove.": "'{0}'フォントファミリーは正常にアンインストールされましたが、完全に削除するにはシステムキャッシュをクリアするために再起動が必要な場合があります。",

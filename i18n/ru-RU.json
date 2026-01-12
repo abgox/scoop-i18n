@@ -292,6 +292,8 @@
   "It requires you to uninstall it manually.": "",
   "Something went wrong here.": "",
   "Refer to: {0}": "",
+  "Commands": "",
+  "Fonts": "",
   "For Windows version before Windows 10 Version 1809 (OS Build 17763), Font can only be installed for all users.\nPlease use following commands to install '{0}' Font for all users.": "Для Windows версий ниже Windows 10 Version 1809 (OS Build 17763) шрифты можно установить только для всех пользователей.\nИспользуйте следующие команды для установки шрифта '{0}' для всех пользователей.",
   "Cannot uninstall '{0}' font.\nIt is currently being used by another application.\nPlease close all applications that are using it (e.g. vscode) and try again.": "Не удалось удалить шрифт '{0}'.\nЕго использует другое приложение.\nЗакройте все приложения, которые его используют (например, vscode), и повторите попытку.",
   "The '{0}' Font family has been uninstalled successfully, but there may be system cache that needs to be restarted to fully remove.": "Шрифт '{0}' успешно удалён, но для полного удаления может потребоваться перезагрузка из-за кэширования.",

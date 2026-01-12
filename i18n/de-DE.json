@@ -292,6 +292,8 @@
   "It requires you to uninstall it manually.": "",
   "Something went wrong here.": "",
   "Refer to: {0}": "",
+  "Commands": "",
+  "Fonts": "",
   "For Windows version before Windows 10 Version 1809 (OS Build 17763), Font can only be installed for all users.\nPlease use following commands to install '{0}' Font for all users.": "Für Windows vor Version 1809 (Build 17763) können Schriftarten nur systemweit installiert werden.\nBitte folgenden Befehl zur Installation von '{0}' für alle Benutzer verwenden:",
   "Cannot uninstall '{0}' font.\nIt is currently being used by another application.\nPlease close all applications that are using it (e.g. vscode) and try again.": "Schriftart '{0}' kann nicht deinstalliert werden.\nWird aktuell von einer Anwendung verwendet.\nBitte alle betroffenen Anwendungen schließen (z.B. vscode) und erneut versuchen.",
   "The '{0}' Font family has been uninstalled successfully, but there may be system cache that needs to be restarted to fully remove.": "Schriftfamilie '{0}' wurde deinstalliert, aber Systemcache muss möglicherweise neu geladen werden.",
