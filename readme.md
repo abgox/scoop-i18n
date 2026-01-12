@@ -86,14 +86,14 @@ An internationalization tool (language pack) for [Scoop](https://scoop.sh/) help
 
 |Language|Progress|
 |:-:|:-:|
-|[de-DE](./i18n/de-DE.json)|95.73%|
+|[de-DE](./i18n/de-DE.json)|95.15%|
 |[en-US](./i18n/en-US.json)|0%|
-|[fr-FR](./i18n/fr-FR.json)|96.04%|
-|[ja-JP](./i18n/ja-JP.json)|96.34%|
-|[ko-KR](./i18n/ko-KR.json)|96.65%|
-|[ru-RU](./i18n/ru-RU.json)|96.34%|
+|[fr-FR](./i18n/fr-FR.json)|95.45%|
+|[ja-JP](./i18n/ja-JP.json)|95.76%|
+|[ko-KR](./i18n/ko-KR.json)|96.06%|
+|[ru-RU](./i18n/ru-RU.json)|95.76%|
 |[zh-CN](./i18n/zh-CN.json)|100%|
-|[zh-HK](./i18n/zh-HK.json)|96.65%|
-|[zh-TW](./i18n/zh-TW.json)|96.34%|
+|[zh-HK](./i18n/zh-HK.json)|96.06%|
+|[zh-TW](./i18n/zh-TW.json)|95.76%|
 
 <!-- prettier-ignore-end -->
