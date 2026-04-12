@@ -3,7 +3,7 @@
 Set-StrictMode -Off
 
 New-Variable -Name 'scoop-i18n' -Value @{
-    Id        = "abgox.scoop-i18n"
+    Id        = 'abgox.scoop-i18n'
     Languages = Get-ChildItem "$PSScriptRoot\i18n" -File | ForEach-Object { $_.BaseName }
     DataFile  = "$PSScriptRoot\data.json"
 } -Scope Script -Option Constant -Force
@@ -112,7 +112,7 @@ else {
 }
 
 if (${scoop-i18n}.Language -notin ${scoop-i18n}.Languages) {
-    ${scoop-i18n}.Language = "en-US"
+    ${scoop-i18n}.Language = 'en-US'
 }
 
 try {
@@ -138,11 +138,11 @@ Add-Member -InputObject ${scoop-i18n} -MemberType ScriptMethod Get_LocalizedStri
 
         $escapedPattern = [regex]::Escape($pattern)
         $regexPattern = $escapedPattern -replace '\\\{\d+\}', '((?s).*)'
-        $regexPattern = "^" + $regexPattern + "$"
+        $regexPattern = '^' + $regexPattern + '$'
         $match = [regex]::Match($InputString, $regexPattern)
         if ($match.Success) {
             $translation = $TranslationMap.$pattern
-            if ($translation -eq "") {
+            if ($translation -eq '') {
                 return $InputString
             }
             $translation = [regex]::Replace($translation, '\{(\d+)\}', {
@@ -176,14 +176,14 @@ function script:Write-Host {
     )
 
     process {
-        if (${scoop-i18n}.Id -eq "abgox.scoop-i18n" -and $Object -is [string]) {
+        if (${scoop-i18n}.Id -eq 'abgox.scoop-i18n' -and $Object -is [string]) {
             # Update shims
             if ($Object) {
                 $pathList = @("$(${scoop-i18n}.ScoopConfig.root_path)\apps\abgox.scoop-i18n\current\app\shims")
                 if (${scoop-i18n}.ScoopConfig.global_path) {
                     $pathList += "$(${scoop-i18n}.ScoopConfig.global_path)\apps\abgox.scoop-i18n\current\app\shims"
                 }
-                $pathList += "C:\ProgramData\scoop\apps\abgox.scoop-i18n\current\app\shims"
+                $pathList += 'C:\ProgramData\scoop\apps\abgox.scoop-i18n\current\app\shims'
 
                 $shims = $null
 
@@ -195,24 +195,24 @@ function script:Write-Host {
                 }
 
                 if ($shims) {
-                    if ($Object -eq "Updating Buckets..." -or ($Object -eq "Scoop was updated successfully!" -and (Get-Content "$($(${scoop-i18n}.ScoopConfig.root_path))\shims\scoop.ps1" -Raw -Encoding utf8) -notlike "*scoop-i18n.ps1*")) {
+                    if ($Object -eq 'Updating Buckets...' -or ($Object -eq 'Scoop was updated successfully!' -and (Get-Content "$($(${scoop-i18n}.ScoopConfig.root_path))\shims\scoop.ps1" -Raw -Encoding utf8) -notlike '*scoop-i18n.ps1*')) {
                         Get-ChildItem $shims | ForEach-Object { Copy-Item $_.FullName "$($(${scoop-i18n}.ScoopConfig.root_path))\shims" -Force }
                     }
                 }
             }
 
-            $pad = ""
+            $pad = ''
 
-            if ($Object -match "^ERROR ") {
-                $Object = $Object -replace "^ERROR ", ""
+            if ($Object -match '^ERROR ') {
+                $Object = $Object -replace '^ERROR ', ''
                 $pad = ${scoop-i18n}.i18n.ERROR
             }
-            elseif ($Object -match "^WARN  ") {
-                $Object = $Object -replace "^WARN  ", ""
+            elseif ($Object -match '^WARN  ') {
+                $Object = $Object -replace '^WARN  ', ''
                 $pad = ${scoop-i18n}.i18n.WARN
             }
-            elseif ($Object -match "^INFO  ") {
-                $Object = $Object -replace "^INFO  ", ""
+            elseif ($Object -match '^INFO  ') {
+                $Object = $Object -replace '^INFO  ', ''
                 $pad = ${scoop-i18n}.i18n.INFO
             }
 
@@ -242,7 +242,7 @@ function script:Write-Output {
     )
 
     process {
-        if (${scoop-i18n}.Id -eq "abgox.scoop-i18n" -and $InputObject -is [string]) {
+        if (${scoop-i18n}.Id -eq 'abgox.scoop-i18n' -and $InputObject -is [string]) {
             $PSBoundParameters['InputObject'] = ${scoop-i18n}.Get_LocalizedString($InputObject)
         }
         Microsoft.PowerShell.Utility\Write-Output @PSBoundParameters
