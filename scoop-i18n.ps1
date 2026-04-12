@@ -1,6 +1,11 @@
 ﻿#Requires -Version 5.1
 
-Set-StrictMode -Off
+try {
+    Microsoft.PowerShell.Core\Set-StrictMode -Off
+}
+catch {
+    throw
+}
 
 New-Variable -Name 'scoop-i18n' -Value @{
     Id        = 'abgox.scoop-i18n'
