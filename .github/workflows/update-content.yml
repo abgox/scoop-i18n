@@ -14,34 +14,12 @@ jobs:
     runs-on: windows-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
-      - name: Configure Git
-        shell: pwsh
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-      - name: Align Json Keys
+      - name: Align Json Keys and Update Readme
         shell: pwsh
         run: |
           .\scripts\align-json-keys.ps1
-
-      - name: Commit and push changes
-        shell: pwsh
-        run: |
-          git add .
-          git commit -m "chore: automatically align json keys"
-          git push
-
-      - name: Update content
-        shell: pwsh
-        run: |
-          .\scripts\auto-update-readme.ps1
-
-      - name: Commit and push changes
-        shell: pwsh
-        run: |
-          git add .
-          git commit -m "docs: automatically update some content"
-          git push
+          .\scripts\push-change.ps1 -message "chore: automatically align json keys"
+          .\scripts\update-readme.ps1
+          .\scripts\push-change.ps1

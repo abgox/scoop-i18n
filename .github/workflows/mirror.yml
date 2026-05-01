@@ -1,4 +1,4 @@
-name: Sync GitHub to Gitee
+name: Mirror
 
 on:
   workflow_dispatch:
@@ -8,10 +8,10 @@ on:
     types: [completed]
 
 jobs:
-  sync-repos:
+  gitee:
     runs-on: ubuntu-latest
     steps:
-      - uses: Yikun/hub-mirror-action@master
+      - uses: abgox/hub-mirror-action@abgox
         with:
           src: github/abgox
           dst: gitee/abgox
