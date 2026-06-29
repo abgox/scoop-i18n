@@ -210,15 +210,15 @@ function script:Write-Host {
 
             if ($Object -match '^ERROR ') {
                 $Object = $Object -replace '^ERROR ', ''
-                $pad = ${scoop-i18n}.i18n.ERROR
+                $pad = ${scoop-i18n}.i18n.ERROR + ' '
             }
             elseif ($Object -match '^WARN  ') {
                 $Object = $Object -replace '^WARN  ', ''
-                $pad = ${scoop-i18n}.i18n.WARN
+                $pad = ${scoop-i18n}.i18n.WARN + ' '
             }
             elseif ($Object -match '^INFO  ') {
                 $Object = $Object -replace '^INFO  ', ''
-                $pad = ${scoop-i18n}.i18n.INFO
+                $pad = ${scoop-i18n}.i18n.INFO + ' '
             }
 
             if ($Object -match ".*suggests installing.*' or '") {

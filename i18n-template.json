@@ -501,7 +501,10 @@
   "Copying {0} => {1}": "",
   "It requires you to uninstall it manually.": "",
   "Something went wrong here.": "",
-  "Refer to: {0}": "",
+  "The installation directory: {0}": "",
+  "'{0}' does not require the data persistence.": "",
+  "They share data: {0}": "",
+  "Refer to{0}": "",
   "Commands": "",
   "Fonts": "",
 
