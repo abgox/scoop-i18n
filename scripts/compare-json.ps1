@@ -12,7 +12,7 @@ Get-ChildItem "$PSScriptRoot\..\i18n" | ForEach-Object {
 
     foreach ($key in $baseTemplate.Keys) {
         if ($targetLang.ContainsKey($key)) {
-            if ($targetLang[$key] -and $targetLang[$key] -ne $key) {
+            if ($targetLang[$key]) {
                 $translated++
             }
             else {

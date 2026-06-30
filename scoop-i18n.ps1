@@ -4,7 +4,7 @@ try {
     Microsoft.PowerShell.Core\Set-StrictMode -Off
 }
 catch {
-    throw
+    return
 }
 
 New-Variable -Name 'scoop-i18n' -Value @{
@@ -12,10 +12,6 @@ New-Variable -Name 'scoop-i18n' -Value @{
     Languages = Get-ChildItem "$PSScriptRoot\i18n" -File | ForEach-Object { $_.BaseName }
     DataFile  = "$PSScriptRoot\data.json"
 } -Scope Script -Option Constant -Force
-
-if (-not (Test-Path ${scoop-i18n}.DataFile)) {
-    return
-}
 
 # https://github.com/abgox/ConvertFrom-JsonAsHashtable
 function ConvertFrom-JsonAsHashtable {
@@ -93,38 +89,33 @@ function ConvertFrom-JsonAsHashtable {
         return ConvertRecursively $parsed
     }
 }
-
-${scoop-i18n}.ScoopConfigFile = Get-Content ${scoop-i18n}.DataFile -Raw -Encoding utf8 | ConvertFrom-Json | Select-Object -ExpandProperty 'configFile'
-
+function ConvertFrom-JsonAsHashtableFromFile {
+    param (
+        [string]$Path
+    )
+    $content = Get-Content $Path -Raw -Encoding utf8
+    if ($PSEdition -eq 'core') {
+        return ConvertFrom-Json $content -AsHashtable
+    }
+    ConvertFrom-JsonAsHashtable $content
+}
 try {
-    ${scoop-i18n}.ScoopConfig = Get-Content ${scoop-i18n}.ScoopConfigFile -Raw -Encoding utf8 | ConvertFrom-JsonAsHashtable
+    ${scoop-i18n}.ScoopConfigFile = Get-Content ${scoop-i18n}.DataFile -Raw -Encoding utf8 | ConvertFrom-Json | Select-Object -ExpandProperty 'configFile'
+    ${scoop-i18n}.ScoopConfig = ConvertFrom-JsonAsHashtableFromFile ${scoop-i18n}.ScoopConfigFile
+    if (-not ($env:SCOOP -or ${scoop-i18n}.ScoopConfig.root_path)) { throw }
 }
 catch {
-    Microsoft.PowerShell.Utility\Write-Host "Failed to get the scoop configuration.`nPlease reinstall 'abgox.scoop-i18n'." -ForegroundColor Red
+    Microsoft.PowerShell.Utility\Write-Host "ERROR: Failed to run scoop-i18n.ps1, please reinstall 'abgox.scoop-i18n'." -ForegroundColor DarkRed
     return
 }
 
-if (-not ${scoop-i18n}.ScoopConfig.root_path) {
-    Microsoft.PowerShell.Utility\Write-Host "Scoop does not have a root_path configuration.`nPlease reinstall 'abgox.scoop-i18n'." -ForegroundColor Red
-    return
-}
-
-if (${scoop-i18n}.ScoopConfig.'abgox-scoop-i18n-language') {
-    ${scoop-i18n}.Language = ${scoop-i18n}.ScoopConfig.'abgox-scoop-i18n-language'
-}
-else {
-    ${scoop-i18n}.Language = $PSUICulture
-}
-
-if (${scoop-i18n}.Language -notin ${scoop-i18n}.Languages) {
-    ${scoop-i18n}.Language = 'en-US'
-}
-
+${scoop-i18n}.Language = ${scoop-i18n}.ScoopConfig.'abgox-scoop-i18n-language', $PSUICulture | Select-Object -First 1
+if (${scoop-i18n}.Language -notin ${scoop-i18n}.Languages) { ${scoop-i18n}.Language = 'en-US' }
 try {
-    ${scoop-i18n}.i18n = Get-Content "$PSScriptRoot\i18n\$(${scoop-i18n}.Language).json" -Raw -Encoding utf8 | ConvertFrom-JsonAsHashtable
+    ${scoop-i18n}.i18n = ConvertFrom-JsonAsHashtableFromFile "$PSScriptRoot\i18n\$(${scoop-i18n}.Language).json"
 }
 catch {
-    Microsoft.PowerShell.Utility\Write-Host "The i18n file for $(${scoop-i18n}.Language) not found.`nPlease reinstall 'abgox.scoop-i18n'." -ForegroundColor Red
+    Microsoft.PowerShell.Utility\Write-Host "ERROR: The i18n file for $(${scoop-i18n}.Language) not found, please reinstall 'abgox.scoop-i18n'." -ForegroundColor DarkRed
     return
 }
 
@@ -133,23 +124,16 @@ Add-Member -InputObject ${scoop-i18n} -MemberType ScriptMethod Get_LocalizedStri
         [string]$InputString,
         [System.Object]$TranslationMap = ${scoop-i18n}.i18n
     )
-
-    if ($TranslationMap.$InputString) {
-        return $TranslationMap.$InputString
-    }
-
+    if ($TranslationMap.$InputString) { return $TranslationMap.$InputString }
     foreach ($pattern in $TranslationMap.Keys) {
         if ($pattern -notmatch '\{\d+\}') { continue }
-
         $escapedPattern = [regex]::Escape($pattern)
         $regexPattern = $escapedPattern -replace '\\\{\d+\}', '((?s).*)'
         $regexPattern = '^' + $regexPattern + '$'
         $match = [regex]::Match($InputString, $regexPattern)
         if ($match.Success) {
             $translation = $TranslationMap.$pattern
-            if ($translation -eq '') {
-                return $InputString
-            }
+            if ($translation -eq '') { return $InputString }
             $translation = [regex]::Replace($translation, '\{(\d+)\}', {
                     param($m)
                     $index = [int]$m.Groups[1].Value
@@ -160,7 +144,6 @@ Add-Member -InputObject ${scoop-i18n} -MemberType ScriptMethod Get_LocalizedStri
     }
     return $InputString
 }
-
 function script:Write-Host {
     [CmdletBinding()]
     param(
@@ -170,44 +153,31 @@ function script:Write-Host {
         )]
         [Alias('Msg', 'Message')]
         $Object,
-
         [switch]$NoNewline,
-
         $Separator,
-
         [System.ConsoleColor]$ForegroundColor,
-
         [System.ConsoleColor]$BackgroundColor
     )
-
     process {
         if (${scoop-i18n}.Id -eq 'abgox.scoop-i18n' -and $Object -is [string]) {
             # Update shims
             if ($Object) {
-                $pathList = @("$(${scoop-i18n}.ScoopConfig.root_path)\apps\abgox.scoop-i18n\current\app\shims")
-                if (${scoop-i18n}.ScoopConfig.global_path) {
-                    $pathList += "$(${scoop-i18n}.ScoopConfig.global_path)\apps\abgox.scoop-i18n\current\app\shims"
-                }
-                $pathList += 'C:\ProgramData\scoop\apps\abgox.scoop-i18n\current\app\shims'
-
+                $scoopRoot = $env:SCOOP, ${scoop-i18n}.ScoopConfig.root_path , "$env:USERPROFILE\scoop" | Select-Object -First 1
+                $scoopGlobal = $env:SCOOP_GLOBAL, ${scoop-i18n}.ScoopConfig.global_path, "$env:ProgramData\scoop" | Select-Object -First 1
+                $pathList = foreach ($d in $scoopRoot, $scoopGlobal) { [System.IO.Path]::Combine($d, 'apps\abgox.scoop-i18n\current\app\shims') }
                 $shims = $null
-
                 foreach ($path in $pathList) {
                     if (Test-Path $path) {
                         $shims = $path
                         break
                     }
                 }
-
-                if ($shims) {
-                    if ($Object -eq 'Updating Buckets...' -or ($Object -eq 'Scoop was updated successfully!' -and (Get-Content "$($(${scoop-i18n}.ScoopConfig.root_path))\shims\scoop.ps1" -Raw -Encoding utf8) -notlike '*scoop-i18n.ps1*')) {
-                        Get-ChildItem $shims | ForEach-Object { Copy-Item $_.FullName "$($(${scoop-i18n}.ScoopConfig.root_path))\shims" -Force }
-                    }
+                if (-not $shims) { return }
+                if ($Object -in 'Updating Buckets...', 'Scoop was updated successfully!' -and (Get-Content "$scoopRoot\shims\scoop.ps1" -Raw -Encoding utf8) -notlike '*abgox.scoop-i18n*') {
+                    Get-ChildItem $shims | ForEach-Object { Copy-Item $_.FullName "$scoopRoot\shims" -Force }
                 }
             }
-
             $pad = ''
-
             if ($Object -match '^ERROR ') {
                 $Object = $Object -replace '^ERROR ', ''
                 $pad = ${scoop-i18n}.i18n.ERROR + ' '
@@ -220,19 +190,15 @@ function script:Write-Host {
                 $Object = $Object -replace '^INFO  ', ''
                 $pad = ${scoop-i18n}.i18n.INFO + ' '
             }
-
             if ($Object -match ".*suggests installing.*' or '") {
                 $Object = $Object -replace "' or '", ${scoop-i18n}.i18n["' or '"]
             }
-
             $Object = $pad + ${scoop-i18n}.Get_LocalizedString($Object)
         }
-
         $PSBoundParameters['Object'] = $Object
         Microsoft.PowerShell.Utility\Write-Host @PSBoundParameters
     }
 }
-
 function script:Write-Output {
     [CmdletBinding()]
     param(
@@ -242,10 +208,8 @@ function script:Write-Output {
         )]
         [Alias('Input', 'Object')]
         $InputObject,
-
         [switch]$NoEnumerate
     )
-
     process {
         if (${scoop-i18n}.Id -eq 'abgox.scoop-i18n' -and $InputObject -is [string]) {
             $PSBoundParameters['InputObject'] = ${scoop-i18n}.Get_LocalizedString($InputObject)
