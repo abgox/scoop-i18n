@@ -87,7 +87,3 @@
 |[zh-TW](./i18n/zh-TW.json)|100%|
 
 <!-- prettier-ignore-end -->
-
-## License
-
-[MIT](./LICENSE) © [abgox](https://me.abgox.com)

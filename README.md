@@ -87,7 +87,3 @@ An internationalization tool (language pack) for [Scoop](https://scoop.sh) helps
 |[zh-TW](./i18n/zh-TW.json)|100%|
 
 <!-- prettier-ignore-end -->
-
-## License
-
-[MIT](./LICENSE) © [abgox](https://me.abgox.com)
