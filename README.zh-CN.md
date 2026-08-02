@@ -1,9 +1,8 @@
 <h1 align="center">✨ <a href="https://scoop-i18n.abgox.com">scoop-i18n</a> ✨</h1>
 
 <p align="center">
-    <a href="readme.md">English</a> |
-    <a href="readme.zh-CN.md">简体中文</a> |
-    <a href="https://github.com/abgox/scoop-i18n">Github</a> |
+    <a href="README.md">English</a> |
+    <a href="https://github.com/abgox/scoop-i18n">GitHub</a> |
     <a href="https://gitee.com/abgox/scoop-i18n">Gitee</a>
 </p>
 
@@ -11,14 +10,8 @@
     <a href="https://github.com/abgox/scoop-i18n">
         <img src="https://img.shields.io/github/stars/abgox/scoop-i18n" alt="github stars" />
     </a>
-    <a href="https://github.com/abgox/scoop-i18n/blob/main/license">
+    <a href="https://github.com/abgox/scoop-i18n/blob/main/LICENSE">
         <img src="https://img.shields.io/github/license/abgox/scoop-i18n" alt="license" />
-    </a>
-    <a href="https://github.com/abgox/scoop-i18n">
-        <img src="https://img.shields.io/github/languages/code-size/abgox/scoop-i18n" alt="code size" />
-    </a>
-    <a href="https://github.com/abgox/scoop-i18n">
-        <img src="https://img.shields.io/github/repo-size/abgox/scoop-i18n" alt="repo size" />
     </a>
     <a href="https://github.com/abgox/scoop-i18n">
         <img src="https://img.shields.io/github/created-at/abgox/scoop-i18n" alt="created" />
@@ -28,20 +21,18 @@
 ---
 
 <p align="center">
-  <strong>喜欢这个项目？请给它 Star ⭐️ 或 <a href="https://abgox.com/donate">赞赏 💰</a></strong>
+  <strong>喜欢这个项目？请给它 Star ⭐️ 或 <a href="https://me.abgox.com/donate">赞赏 💰</a></strong>
 </p>
 
 ## 介绍
 
-[Scoop](https://scoop.sh/) 的国际化解决方案(语言包)，帮助不同语言的用户更轻松地使用 Scoop
+[Scoop](https://scoop.sh) 的国际化解决方案(语言包)，帮助不同语言的用户更轻松地使用 Scoop
 
 - 🚀 简单易用
-
   - 安装简单：只需 `scoop install` 即可使用
   - 即时设置：安装后立即生效，无需复杂配置
 
 - ⚡️ 非侵入式
-
   - Hook 方案：通过 Hook 实现，没有修改 Scoop
   - 无副作用：轻量且安全，不会干扰现有的设置
 
@@ -55,7 +46,7 @@
 
 ## 使用
 
-1. 添加 [abyss](https://abyss.abgox.com) bucket ([Github](https://github.com/abgox/abyss) 或 [Gitee](https://gitee.com/abgox/abyss))
+1. 添加 [abyss](https://abyss.abgox.com) bucket ([GitHub](https://github.com/abgox/abyss) 或 [Gitee](https://gitee.com/abgox/abyss))
 
    ```shell
    scoop bucket add abyss https://github.com/abgox/abyss
@@ -72,7 +63,6 @@
    ```
 
 3. 安装完成后，运行 `scoop` 相关命令的输出将转换为 `$PSUICulture` 对应的语言
-
    - 如果不可用，它会回退到 `en-US`
    - 也可以通过以下命令指定语言:
 
@@ -97,3 +87,7 @@
 |[zh-TW](./i18n/zh-TW.json)|100%|
 
 <!-- prettier-ignore-end -->
+
+## License
+
+[MIT](./LICENSE) © [abgox](https://me.abgox.com)

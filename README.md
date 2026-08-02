@@ -1,9 +1,8 @@
 <h1 align="center">✨ <a href="https://scoop-i18n.abgox.com">scoop-i18n</a> ✨</h1>
 
 <p align="center">
-    <a href="readme.zh-CN.md">简体中文</a> |
-    <a href="readme.md">English</a> |
-    <a href="https://github.com/abgox/scoop-i18n">Github</a> |
+    <a href="README.zh-CN.md">简体中文</a> |
+    <a href="https://github.com/abgox/scoop-i18n">GitHub</a> |
     <a href="https://gitee.com/abgox/scoop-i18n">Gitee</a>
 </p>
 
@@ -11,14 +10,8 @@
     <a href="https://github.com/abgox/scoop-i18n">
         <img src="https://img.shields.io/github/stars/abgox/scoop-i18n" alt="github stars" />
     </a>
-    <a href="https://github.com/abgox/scoop-i18n/blob/main/license">
+    <a href="https://github.com/abgox/scoop-i18n/blob/main/LICENSE">
         <img src="https://img.shields.io/github/license/abgox/scoop-i18n" alt="license" />
-    </a>
-    <a href="https://github.com/abgox/scoop-i18n">
-        <img src="https://img.shields.io/github/languages/code-size/abgox/scoop-i18n" alt="code size" />
-    </a>
-    <a href="https://github.com/abgox/scoop-i18n">
-        <img src="https://img.shields.io/github/repo-size/abgox/scoop-i18n" alt="repo size" />
     </a>
     <a href="https://github.com/abgox/scoop-i18n">
         <img src="https://img.shields.io/github/created-at/abgox/scoop-i18n" alt="created" />
@@ -28,20 +21,18 @@
 ---
 
 <p align="center">
-  <strong>Star ⭐️ or <a href="https://abgox.com/donate">Donate 💰</a> if you like it!</strong>
+  <strong>Star ⭐️ or <a href="https://me.abgox.com/donate">Donate 💰</a> if you like it!</strong>
 </p>
 
 ## Introduce
 
-An internationalization tool (language pack) for [Scoop](https://scoop.sh/) helps users of different languages use Scoop more easily.
+An internationalization tool (language pack) for [Scoop](https://scoop.sh) helps users of different languages use Scoop more easily.
 
 - 🚀 Easy to Use
-
-  - Simple Install: Just `scoop install` and go!
+  - Simple Install: Just `scoop install` and go.
   - Instant Setup: Works right after installation, no complex configuration.
 
 - ⚡️ Non-Intrusive
-
   - Hook Solution: Implemented via Hook, no changes to Scoop.
   - No Side Effects: Lightweight & safe. Won’t break anything.
 
@@ -55,7 +46,7 @@ An internationalization tool (language pack) for [Scoop](https://scoop.sh/) help
 
 ## Usage
 
-1.  Add the [abyss](https://abyss.abgox.com) bucket via [Github](https://github.com/abgox/abyss) or [Gitee](https://gitee.com/abgox/abyss).
+1.  Add the [abyss](https://abyss.abgox.com) bucket via [GitHub](https://github.com/abgox/abyss) or [Gitee](https://gitee.com/abgox/abyss).
 
     ```shell
     scoop bucket add abyss https://github.com/abgox/abyss
@@ -72,7 +63,6 @@ An internationalization tool (language pack) for [Scoop](https://scoop.sh/) help
     ```
 
 3.  Then the output of `scoop` will be converted to the language corresponding to `$PSUICulture`.
-
     - If unavailable, it will fall back to `en-US`.
     - You can also specify the language:
 
@@ -97,3 +87,7 @@ An internationalization tool (language pack) for [Scoop](https://scoop.sh/) help
 |[zh-TW](./i18n/zh-TW.json)|100%|
 
 <!-- prettier-ignore-end -->
+
+## License
+
+[MIT](./LICENSE) © [abgox](https://me.abgox.com)
