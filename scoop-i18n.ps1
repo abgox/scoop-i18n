@@ -179,19 +179,22 @@ function script:Write-Host {
                 }
             }
             $pad = ''
-            if ($Object -match '^ERROR ') {
+            $errorLabel = ${scoop-i18n}.i18n.ERROR
+            $warnLabel = ${scoop-i18n}.i18n.WARN
+            $infoLabel = ${scoop-i18n}.i18n.INFO
+            if ($errorLabel -and $Object -match '^ERROR ') {
                 $Object = $Object -replace '^ERROR ', ''
-                $pad = ${scoop-i18n}.i18n.ERROR + ' '
+                $pad = $errorLabel + ' '
             }
-            elseif ($Object -match '^WARN  ') {
+            elseif ($warnLabel -and $Object -match '^WARN  ') {
                 $Object = $Object -replace '^WARN  ', ''
-                $pad = ${scoop-i18n}.i18n.WARN + ' '
+                $pad = $warnLabel + ' '
             }
-            elseif ($Object -match '^INFO  ') {
+            elseif ($infoLabel -and $Object -match '^INFO  ') {
                 $Object = $Object -replace '^INFO  ', ''
-                $pad = ${scoop-i18n}.i18n.INFO + ' '
+                $pad = $infoLabel + ' '
             }
-            if ($Object -match ".*suggests installing.*' or '") {
+            if (${scoop-i18n}.i18n["' or '"] -and $Object -match ".*suggests installing.*' or '") {
                 $Object = $Object -replace "' or '", ${scoop-i18n}.i18n["' or '"]
             }
             $Object = $pad + ${scoop-i18n}.Get_LocalizedString($Object)
