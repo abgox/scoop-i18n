@@ -149,7 +149,8 @@ function script:Write-Host {
     param(
         [Parameter(
             Position = 0,
-            ValueFromPipeline = $true
+            ValueFromPipeline = $true,
+            ValueFromRemainingArguments = $true
         )]
         [Alias('Msg', 'Message')]
         $Object,
@@ -204,7 +205,8 @@ function script:Write-Output {
     param(
         [Parameter(
             Position = 0,
-            ValueFromPipeline = $true
+            ValueFromPipeline = $true,
+            ValueFromRemainingArguments = $true
         )]
         [Alias('Input', 'Object')]
         $InputObject,
