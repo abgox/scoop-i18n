@@ -160,8 +160,7 @@ function script:Write-Host {
         [System.ConsoleColor]$BackgroundColor
     )
     process {
-        $Object = $Object -join ' '
-        if (${scoop-i18n}.Id -eq 'abgox.scoop-i18n') {
+        if (${scoop-i18n}.Id -eq 'abgox.scoop-i18n' -and $Object.Count -eq 1) {
             # Update shims
             if ($Object) {
                 $scoopRoot = $env:SCOOP, ${scoop-i18n}.ScoopConfig.root_path , "$env:USERPROFILE\scoop" | Select-Object -First 1
@@ -217,8 +216,7 @@ function script:Write-Output {
         [switch]$NoEnumerate
     )
     process {
-        $InputObject = $InputObject -join ' '
-        if (${scoop-i18n}.Id -eq 'abgox.scoop-i18n') {
+        if (${scoop-i18n}.Id -eq 'abgox.scoop-i18n' -and $InputObject.Count -eq 1) {
             $PSBoundParameters['InputObject'] = ${scoop-i18n}.Get_LocalizedString($InputObject)
         }
         Microsoft.PowerShell.Utility\Write-Output @PSBoundParameters
