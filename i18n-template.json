@@ -27,6 +27,7 @@
   "you need admin rights to {0} global apps": "",
   "ERROR: you need admin rights to {0} global apps": "",
   "'{0}' ({1}) is a global app. You need admin rights to reset it. Skipping.": "",
+  "{0} requires admin rights to {1}": "",
 
   // #endregion general
 
@@ -98,7 +99,9 @@
   // #region lib/database.ps1
 
   // config: use_sqlite_cache
-  "Downloading SQLite {0}...": "",
+  "Downloading System.Data.SQLite {0}...": "",
+  "Downloading SQLite DLL {0}...": "",
+  "Extracting libraries... ": "",
 
   // #endregion lib/database.ps1
 
@@ -190,10 +193,12 @@
   // #region lib/manifest.ps1
   "Error parsing JSON at '{0}'.": "",
   "Multiple buckets contain manifest '{0}', the current selection is '{1}'.": "",
-  "Given version ({0}) does not match manifest ({1})": "",
-  "Attempting to generate manifest for '{0}' ({1})": "",
-  "'{0}' does not have autoupdate capability\r\ncouldn't find manifest for '{1}'": "",
-  "Could not install {0}": "",
+  "Bucket '{0}' is not a git repository. Cannot search historical versions.": "",
+  "Could not find inner bucket directory for '{0}' at '{1}'.": "",
+  "Resolving historical manifest for '{0}' ({1})": "",
+  "Could not find manifest for '{0}@{1}' and no autoupdate is available": "",
+  "No historical manifest found for '{0}@{1}'; attempting autoupdate": "",
+  "Autoupdate failed for '{0}@{1}'": "",
   "Invalid manifest: The 'name' property is missing from 'psmodule'.": "",
 
   // #endregion lib/manifest.ps1
@@ -313,6 +318,8 @@
   "'{0}' ({1}) is already installed.\nUse 'scoop update {2} --global' to install a new version.": "",
   "'{0}' ({1}) is already installed.\nUse 'scoop update {2}' to install a new version.": "",
   "'{0}' ({1}) is already installed. Skipping.": "",
+  "Could not find manifest for '{0}'": "",
+  "Could not install: {0}": "",
 
   "Scoop uses 'aria2c' for multi-connection downloads.": "",
   "Should it cause issues, run 'scoop config aria2-enabled false' to disable it.": "",
@@ -444,6 +451,8 @@
   "{0}: Url report not found. Will submit {1}": "",
   "{0}: Unable to check hash match for {1}": "",
   "{0}: File report not found for unknown reason. Manual file upload is required (instead of url submission).": "",
+  "{0}: {1}/{2}, see {3}": "",
+  "{0}: url {1}": "",
 
   // #endregion libexec/scoop-virustotal.ps1
 
@@ -501,6 +510,7 @@
   "Copying {0} => {1}": "",
   "It requires you to uninstall it manually.": "",
   "Something went wrong here.": "",
+  "Please try again.": "",
   "The installation directory: {0}": "",
   "'{0}' does not require the data persistence.": "",
   "They share data: {0}": "",
